@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using EnterKratos.ScriptableObjects;
+using UnityEngine;
 using UnityEngine.Events;
 
 namespace EnterKratos
