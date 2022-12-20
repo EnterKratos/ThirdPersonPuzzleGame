@@ -805,10 +805,7 @@ GameObject:
   - component: {fileID: 95237074988894122}
   - component: {fileID: 1667268120}
   - component: {fileID: 1667268119}
-  - component: {fileID: 1667268121}
-  - component: {fileID: 1667268124}
   - component: {fileID: 1667268127}
-  - component: {fileID: 1274509855714870593}
   m_Layer: 0
   m_Name: TurtleShellPBR
   m_TagString: Untagged
@@ -889,40 +886,6 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 1
   m_ObstacleAvoidanceType: 4
---- !u!114 &1667268121
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774625739149480}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ce2e5a1c5596e84fbf044b7ca5eb857, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navMeshAgent: {fileID: 1667268119}
-  target: {fileID: 0}
---- !u!114 &1667268124
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774625739149480}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c058592748c42074abff188000298fd4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  navMeshAgent: {fileID: 1667268119}
-  tolerance: 0.1
-  patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!114 &1667268127
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -935,39 +898,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55c949ce4394436879e45124d9475e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  currentStateName: 
---- !u!114 &1274509855714870593
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774625739149480}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b50556a077ef3394f845cb6d7c3f5bd0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _enemy: {fileID: 11400000, guid: d589af84ff7618d49aacbc5aeb70586f, type: 2}
-  _layerMask:
-    serializedVersion: 2
-    m_Bits: 256
-  onPlayerDetected:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1667268127}
-        m_TargetAssemblyTypeName: EnterKratos.EnemyStateMachine, Assembly-CSharp
-        m_MethodName: PlayerDetected
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  trigger: 0
+  blackboard:
+    enemy: {fileID: 11400000, guid: d589af84ff7618d49aacbc5aeb70586f, type: 2}
+    navMeshAgent: {fileID: 1667268119}
+    player: {fileID: 0}
+    patrolPointTolerance: 0.1
+    patrolPoints:
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 0}
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 256
 --- !u!1 &1822049695589022
 GameObject:
   m_ObjectHideFlags: 0

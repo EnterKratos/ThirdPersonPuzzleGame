@@ -1,37 +1,40 @@
-﻿using EnterKratos.States;
+﻿using System;
+using System.Collections.Generic;
+using EnterKratos.States;
 using UnityEngine;
 
 namespace EnterKratos
 {
-    public class StateMachine: MonoBehaviour
+    public class StateMachine<T>: MonoBehaviour where T: Enum
     {
-        public string currentStateName;
-        private BaseState _currentState;
+        protected virtual T InitialState => default;
+        protected readonly Dictionary<T, BaseState<T>> States = new();
+        private T _currentState;
+        private BaseState<T> CurrentState => States.ContainsKey(_currentState) ? States[_currentState] : null;
+
+        public void ChangeState(T state)
+        {
+            CurrentState.Exit();
+
+            _currentState = state;
+
+            CurrentState.Enter();
+        }
 
         private void Start()
         {
-            _currentState = GetInitialState();
+            _currentState = InitialState;
             ChangeState(_currentState);
         }
 
-        protected void Update()
+        private void Update()
         {
-            _currentState?.Update();
+            CurrentState?.Update();
         }
 
-        protected void ChangeState(BaseState newState)
+        private void OnDrawGizmos()
         {
-            _currentState.Exit();
-
-            _currentState = newState;
-            currentStateName = _currentState.Name;
-
-            _currentState.Enter();
-        }
-
-        protected virtual BaseState GetInitialState()
-        {
-            return null;
+            CurrentState?.OnDrawGizmos();
         }
     }
 }

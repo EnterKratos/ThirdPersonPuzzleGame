@@ -1,14 +1,14 @@
-﻿namespace EnterKratos.States
-{
-    public class BaseState
-    {
-        public string Name { get; }
-        protected readonly StateMachine StateMachine;
+﻿using System;
 
-        protected BaseState(string name, StateMachine stateMachine)
+namespace EnterKratos.States
+{
+    public class BaseState<T> where T : Enum
+    {
+        protected readonly StateMachine<T> StateMachine;
+
+        protected BaseState(StateMachine<T> stateMachine)
         {
             StateMachine = stateMachine;
-            Name = name;
         }
 
         public virtual void Enter()
@@ -20,6 +20,10 @@
         }
 
         public virtual void Exit()
+        {
+        }
+
+        public virtual void OnDrawGizmos()
         {
         }
     }

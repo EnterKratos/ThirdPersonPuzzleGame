@@ -1,24 +1,41 @@
-﻿namespace EnterKratos.States
+﻿using UnityEngine;
+
+namespace EnterKratos.States
 {
-    public class AttackState: BaseState
+    public class AttackState: BaseState<EnemyState>
     {
-        private NavMeshAgentFollow _follow;
+        private readonly EnemyBlackboard _blackboard;
+        private readonly Collider[] _colliderBuffer;
 
-        public AttackState(EnemyStateMachine stateMachine) : base(nameof(AttackState), stateMachine)
+        public AttackState(StateMachine<EnemyState> stateMachine, EnemyBlackboard blackboard)
+            : base(stateMachine)
         {
+            _blackboard = blackboard;
+            _colliderBuffer = new Collider[PlayerDetection.BufferSize];
         }
 
-        public override void Enter()
+        public override void Update()
         {
-            base.Enter();
-            _follow = StateMachine.GetComponent<NavMeshAgentFollow>();
-            _follow.enabled = true;
+            base.Update();
+            GoToPlayer();
+
+            if (!PlayerDetection.DetectPlayer(StateMachine.transform.position, _blackboard.enemy.detectionRadius,
+                    _colliderBuffer, _blackboard.layerMask))
+            {
+                StateMachine.ChangeState(EnemyState.Patrol);
+            }
         }
 
-        public override void Exit()
+        public override void OnDrawGizmos()
         {
-            base.Exit();
-            _follow.enabled = false;
+            base.OnDrawGizmos();
+            Gizmos.color = Color.red;
+            Gizmos.DrawWireSphere(StateMachine.transform.position, _blackboard.enemy.detectionRadius);
+        }
+
+        private void GoToPlayer()
+        {
+            _blackboard.navMeshAgent.destination = _blackboard.player.position;
         }
     }
 }

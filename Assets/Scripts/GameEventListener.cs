@@ -13,6 +13,7 @@ namespace EnterKratos
 
         private void OnDisable() => @event.UnregisterListener(this);
 
+
         public void OnEventRaised() => response.Invoke();
     }
 }

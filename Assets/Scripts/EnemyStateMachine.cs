@@ -1,26 +1,19 @@
 ﻿using EnterKratos.States;
+using UnityEngine;
 
 namespace EnterKratos
 {
-    public class EnemyStateMachine: StateMachine
+    public class EnemyStateMachine: StateMachine<EnemyState>
     {
-        private PatrolState _patrolStateState;
-        private AttackState _attackState;
+        [SerializeField]
+        private EnemyBlackboard blackboard;
 
         private void Awake()
         {
-            _patrolStateState = new PatrolState(this);
-            _attackState = new AttackState(this);
+            States[EnemyState.Patrol] = new PatrolState(this, blackboard);
+            States[EnemyState.Attack] = new AttackState(this, blackboard);
         }
 
-        protected override BaseState GetInitialState()
-        {
-            return _patrolStateState;
-        }
-
-        public void PlayerDetected()
-        {
-            ChangeState(_attackState);
-        }
+        protected override EnemyState InitialState => EnemyState.Patrol;
     }
 }
