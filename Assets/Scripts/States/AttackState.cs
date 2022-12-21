@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Linq;
+using UnityEngine;
 
 namespace EnterKratos.States
 {
@@ -19,18 +20,31 @@ namespace EnterKratos.States
             base.Update();
             GoToPlayer();
 
-            if (!PlayerDetection.DetectPlayer(StateMachine.transform.position, _blackboard.enemy.detectionRadius,
-                    _colliderBuffer, _blackboard.playerDetectionMask))
+            var position = StateMachine.transform.position;
+            var enemy = _blackboard.enemy;
+            var detectionMask = _blackboard.playerDetectionMask;
+
+            if (!PlayerDetection.DetectPlayer(position, enemy.detectionRadius, _colliderBuffer, detectionMask))
             {
                 StateMachine.ChangeState(EnemyState.Patrol);
+            }
+
+            if (PlayerDetection.DetectPlayer(position, enemy.attackRadius, _colliderBuffer, detectionMask))
+            {
+                _colliderBuffer.First().GetComponent<HealthSystem>().Attack(enemy.attackDamage);
             }
         }
 
         public override void OnDrawGizmos()
         {
             base.OnDrawGizmos();
-            Gizmos.color = Color.red;
-            Gizmos.DrawWireSphere(StateMachine.transform.position, _blackboard.enemy.detectionRadius);
+            var position = StateMachine.transform.position;
+
+            Gizmos.color = _blackboard.enemy.detectionGizmoColour;
+            Gizmos.DrawWireSphere(position, _blackboard.enemy.detectionRadius);
+
+            Gizmos.color = _blackboard.enemy.attackGizmoColour;
+            Gizmos.DrawWireSphere(position, _blackboard.enemy.attackRadius);
         }
 
         private void GoToPlayer()
