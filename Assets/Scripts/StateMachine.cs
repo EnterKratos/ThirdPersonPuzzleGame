@@ -14,11 +14,11 @@ namespace EnterKratos
 
         public void ChangeState(T state)
         {
-            CurrentState.Exit();
+            CurrentState?.Exit();
 
             _currentState = state;
 
-            CurrentState.Enter();
+            CurrentState?.Enter();
         }
 
         private void Start()

@@ -898,10 +898,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e55c949ce4394436879e45124d9475e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialState: 1
   blackboard:
     enemy: {fileID: 11400000, guid: d589af84ff7618d49aacbc5aeb70586f, type: 2}
     navMeshAgent: {fileID: 1667268119}
     player: {fileID: 0}
+    idleWaitTime: 2
     patrolPointTolerance: 0.1
     patrolPoints:
     - {fileID: 0}
@@ -909,7 +911,7 @@ MonoBehaviour:
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
-    layerMask:
+    playerDetectionMask:
       serializedVersion: 2
       m_Bits: 256
 --- !u!1 &1822049695589022

@@ -5,7 +5,8 @@ namespace EnterKratos.States
     public class PatrolState: BaseState<EnemyState>
     {
         private readonly EnemyBlackboard _blackboard;
-        private int _patrolPointIndex;
+        private int _targetPatrolPointIndex;
+        private int _nextPatrolPointIndex;
         private readonly Collider[] _colliderBuffer;
 
         public PatrolState(StateMachine<EnemyState> stateMachine, EnemyBlackboard blackboard)
@@ -18,7 +19,11 @@ namespace EnterKratos.States
         public override void Enter()
         {
             base.Enter();
-            GoToPoint();
+            _targetPatrolPointIndex = _nextPatrolPointIndex;
+            _blackboard.navMeshAgent.GoToPoint(_blackboard.patrolPoints[_targetPatrolPointIndex].position);
+
+            _nextPatrolPointIndex = _targetPatrolPointIndex != _blackboard.patrolPoints.Length - 1 ?
+                _nextPatrolPointIndex + 1 : 0;
         }
 
         public override void Update()
@@ -27,7 +32,7 @@ namespace EnterKratos.States
             CheckPatrolPoints();
 
             if (PlayerDetection.DetectPlayer(StateMachine.transform.position, _blackboard.enemy.detectionRadius,
-                    _colliderBuffer, _blackboard.layerMask))
+                    _colliderBuffer, _blackboard.playerDetectionMask))
             {
                 StateMachine.ChangeState(EnemyState.Attack);
             }
@@ -42,28 +47,12 @@ namespace EnterKratos.States
 
         private void CheckPatrolPoints()
         {
-            var distance = Vector3.Distance(StateMachine.transform.position, _blackboard.patrolPoints[_patrolPointIndex].position);
+            var distance = Vector3.Distance(StateMachine.transform.position, _blackboard.patrolPoints[_targetPatrolPointIndex].position);
 
-            if (distance > _blackboard.patrolPointTolerance)
+            if (distance <= _blackboard.patrolPointTolerance)
             {
-                return;
+                StateMachine.ChangeState(EnemyState.Idle);
             }
-
-            if (_patrolPointIndex == _blackboard.patrolPoints.Length - 1)
-            {
-                _patrolPointIndex = 0;
-            }
-            else
-            {
-                _patrolPointIndex++;
-            }
-
-            GoToPoint();
-        }
-
-        private void GoToPoint()
-        {
-            _blackboard.navMeshAgent.destination = _blackboard.patrolPoints[_patrolPointIndex].position;
         }
     }
 }

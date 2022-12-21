@@ -1023,6 +1023,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2135612894}
     - target: {fileID: 1667268127, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
+      propertyPath: blackboard.waitTime
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1667268127, guid: 38efdaadbfe1d624bbee439cb02e7661, type: 3}
       propertyPath: blackboard.tolerance
       value: 0.1
       objectReference: {fileID: 0}

@@ -20,7 +20,7 @@ namespace EnterKratos.States
             GoToPlayer();
 
             if (!PlayerDetection.DetectPlayer(StateMachine.transform.position, _blackboard.enemy.detectionRadius,
-                    _colliderBuffer, _blackboard.layerMask))
+                    _colliderBuffer, _blackboard.playerDetectionMask))
             {
                 StateMachine.ChangeState(EnemyState.Patrol);
             }
