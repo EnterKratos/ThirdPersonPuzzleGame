@@ -19,6 +19,8 @@ namespace EnterKratos.States
         public override void Enter()
         {
             base.Enter();
+            _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, true);
+
             _targetPatrolPointIndex = _nextPatrolPointIndex;
             _blackboard.navMeshAgent.GoToPoint(_blackboard.patrolPoints[_targetPatrolPointIndex].position);
 
@@ -36,6 +38,12 @@ namespace EnterKratos.States
             {
                 StateMachine.ChangeState(EnemyState.Attack);
             }
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, false);
         }
 
         public override void OnDrawGizmos()

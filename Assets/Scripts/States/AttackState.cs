@@ -15,6 +15,12 @@ namespace EnterKratos.States
             _colliderBuffer = new Collider[PlayerDetection.BufferSize];
         }
 
+        public override void Enter()
+        {
+            base.Enter();
+            _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, true);
+        }
+
         public override void Update()
         {
             base.Update();
@@ -33,6 +39,12 @@ namespace EnterKratos.States
             {
                 _colliderBuffer.First().GetComponent<HealthSystem>().Attack(enemy.attackDamage);
             }
+        }
+
+        public override void Exit()
+        {
+            base.Exit();
+            _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, false);
         }
 
         public override void OnDrawGizmos()
