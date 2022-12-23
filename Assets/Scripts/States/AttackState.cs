@@ -27,9 +27,10 @@ namespace EnterKratos.States
         public override void Update()
         {
             base.Update();
-            // TODO: Turn to face player
+            var transform = StateMachine.transform;
+            transform.RotateTowards(_blackboard.player, _blackboard.enemy.rotationSpeed);
 
-            var position = StateMachine.transform.position;
+            var position = transform.position;
             var enemy = _blackboard.enemy;
             var detectionMask = _blackboard.playerDetectionMask;
 

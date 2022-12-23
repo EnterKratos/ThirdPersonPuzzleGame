@@ -2,7 +2,7 @@
 
 namespace EnterKratos.ScriptableObjects
 {
-    [CreateAssetMenu(menuName = "Enemy")]
+    [CreateAssetMenu]
     public class Enemy : ScriptableObject
     {
         public float detectionRadius;
@@ -10,5 +10,6 @@ namespace EnterKratos.ScriptableObjects
         public float attackRadius;
         public Color attackGizmoColour;
         public int attackDamage;
+        public float rotationSpeed;
     }
 }
