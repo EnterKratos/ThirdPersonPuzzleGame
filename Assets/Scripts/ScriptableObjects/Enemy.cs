@@ -11,5 +11,6 @@ namespace EnterKratos.ScriptableObjects
         public Color attackGizmoColour;
         public int attackDamage;
         public float rotationSpeed;
+        public float chaseTimeout;
     }
 }

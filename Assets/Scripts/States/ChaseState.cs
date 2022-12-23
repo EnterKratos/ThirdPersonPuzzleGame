@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System.Collections;
+using UnityEngine;
 
 namespace EnterKratos.States
 {
@@ -7,6 +8,7 @@ namespace EnterKratos.States
         private readonly EnemyBlackboard _blackboard;
         private readonly Collider[] _colliderBuffer;
         private readonly EnemyStateMachine _stateMachine;
+        private Coroutine _chaseTimer;
 
         public ChaseState(EnemyStateMachine stateMachine, EnemyBlackboard blackboard)
             : base(stateMachine)
@@ -31,9 +33,22 @@ namespace EnterKratos.States
             var enemy = _blackboard.enemy;
             var detectionMask = _blackboard.playerDetectionMask;
 
-            if (!PlayerDetection.DetectPlayer(position, enemy.detectionRadius, _colliderBuffer, detectionMask))
+            if (PlayerDetection.DetectPlayer(position, enemy.detectionRadius, _colliderBuffer, detectionMask))
             {
-                _stateMachine.ChangeState(EnemyState.Patrol);
+                if (_chaseTimer != null)
+                {
+                    StateMachine.StopCoroutine(_chaseTimer);
+                    _chaseTimer = null;
+                }
+            }
+            else
+            {
+                if (_chaseTimer != null)
+                {
+                    return;
+                }
+
+                _chaseTimer = StateMachine.StartCoroutine(ChaseTimer());
             }
 
             if (PlayerDetection.DetectPlayer(position, enemy.attackRadius, _colliderBuffer, detectionMask))
@@ -53,6 +68,14 @@ namespace EnterKratos.States
             base.OnDrawGizmos();
             _stateMachine.DrawDetectionRadius();
             _stateMachine.DrawAttackRadius();
+        }
+
+        private IEnumerator ChaseTimer()
+        {
+            yield return new WaitForSeconds(_blackboard.enemy.chaseTimeout);
+            _chaseTimer = null;
+
+            _stateMachine.ChangeState(EnemyState.Patrol);
         }
 
         private void GoToPlayer()
