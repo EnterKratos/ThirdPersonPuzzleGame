@@ -17,5 +17,6 @@ namespace EnterKratos
         public Transform[] patrolPoints;
         public LayerMask playerDetectionMask;
         public static readonly int MovingParam = Animator.StringToHash("Moving");
+        public static readonly int AttackParam = Animator.StringToHash("Attack");
     }
 }

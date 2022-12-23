@@ -5,6 +5,7 @@
     {
         Idle,
         Patrol,
-        Attack
+        Attack,
+        Chase
     }
 }

@@ -7,10 +7,13 @@ namespace EnterKratos.States
     {
         private readonly EnemyBlackboard _blackboard;
         private readonly Collider[] _colliderBuffer;
+        private bool _playerInAttackRadius;
+        private readonly EnemyStateMachine _stateMachine;
 
-        public AttackState(StateMachine<EnemyState> stateMachine, EnemyBlackboard blackboard)
+        public AttackState(EnemyStateMachine stateMachine, EnemyBlackboard blackboard)
             : base(stateMachine)
         {
+            _stateMachine = stateMachine;
             _blackboard = blackboard;
             _colliderBuffer = new Collider[PlayerDetection.BufferSize];
         }
@@ -18,50 +21,67 @@ namespace EnterKratos.States
         public override void Enter()
         {
             base.Enter();
-            _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, true);
+            _blackboard.animator.SetTrigger(EnemyBlackboard.AttackParam);
         }
 
         public override void Update()
         {
             base.Update();
-            GoToPlayer();
+            // TODO: Turn to face player
 
             var position = StateMachine.transform.position;
             var enemy = _blackboard.enemy;
             var detectionMask = _blackboard.playerDetectionMask;
 
-            if (!PlayerDetection.DetectPlayer(position, enemy.detectionRadius, _colliderBuffer, detectionMask))
+            var playerInDetectionRadius =
+                PlayerDetection.DetectPlayer(position, enemy.detectionRadius, _colliderBuffer, detectionMask);
+            if (!playerInDetectionRadius)
             {
                 StateMachine.ChangeState(EnemyState.Patrol);
+                return;
             }
 
-            if (PlayerDetection.DetectPlayer(position, enemy.attackRadius, _colliderBuffer, detectionMask))
+            _playerInAttackRadius = PlayerDetection.DetectPlayer(position, enemy.attackRadius, _colliderBuffer, detectionMask);
+            if (_playerInAttackRadius)
             {
-                _colliderBuffer.First().GetComponent<HealthSystem>().Attack(enemy.attackDamage);
+                _blackboard.animator.SetTrigger(EnemyBlackboard.AttackParam);
+            }
+            else
+            {
+                StateMachine.ChangeState(EnemyState.Chase);
             }
         }
 
         public override void Exit()
         {
             base.Exit();
-            _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, false);
+            _blackboard.animator.SetBool(EnemyBlackboard.AttackParam, false);
+        }
+
+        public override void HandleEvent(int eventType)
+        {
+            base.HandleEvent(eventType);
+            switch ((EnemyAnimationEvents)eventType)
+            {
+                case EnemyAnimationEvents.Attack:
+                {
+                    if (_playerInAttackRadius)
+                    {
+                        _colliderBuffer.First().GetComponent<HealthSystem>().Attack(_blackboard.enemy.attackDamage);
+                    }
+                    break;
+                }
+                default:
+                    Debug.LogWarning($"Unhandled AnimationEvent type {(EnemyAnimationEvents)eventType}");
+                    break;
+            }
         }
 
         public override void OnDrawGizmos()
         {
             base.OnDrawGizmos();
-            var position = StateMachine.transform.position;
-
-            Gizmos.color = _blackboard.enemy.detectionGizmoColour;
-            Gizmos.DrawWireSphere(position, _blackboard.enemy.detectionRadius);
-
-            Gizmos.color = _blackboard.enemy.attackGizmoColour;
-            Gizmos.DrawWireSphere(position, _blackboard.enemy.attackRadius);
-        }
-
-        private void GoToPlayer()
-        {
-            _blackboard.navMeshAgent.destination = _blackboard.player.position;
+            _stateMachine.DrawDetectionRadius();
+            _stateMachine.DrawAttackRadius();
         }
     }
 }

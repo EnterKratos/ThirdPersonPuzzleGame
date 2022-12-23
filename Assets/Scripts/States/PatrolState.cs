@@ -8,10 +8,12 @@ namespace EnterKratos.States
         private int _targetPatrolPointIndex;
         private int _nextPatrolPointIndex;
         private readonly Collider[] _colliderBuffer;
+        private readonly EnemyStateMachine _stateMachine;
 
-        public PatrolState(StateMachine<EnemyState> stateMachine, EnemyBlackboard blackboard)
+        public PatrolState(EnemyStateMachine stateMachine, EnemyBlackboard blackboard)
             : base(stateMachine)
         {
+            _stateMachine = stateMachine;
             _blackboard = blackboard;
             _colliderBuffer = new Collider[PlayerDetection.BufferSize];
         }
@@ -36,7 +38,7 @@ namespace EnterKratos.States
             if (PlayerDetection.DetectPlayer(StateMachine.transform.position, _blackboard.enemy.detectionRadius,
                     _colliderBuffer, _blackboard.playerDetectionMask))
             {
-                StateMachine.ChangeState(EnemyState.Attack);
+                StateMachine.ChangeState(EnemyState.Chase);
             }
         }
 
@@ -49,8 +51,7 @@ namespace EnterKratos.States
         public override void OnDrawGizmos()
         {
             base.OnDrawGizmos();
-            Gizmos.color = Color.green;
-            Gizmos.DrawWireSphere(StateMachine.transform.position, _blackboard.enemy.detectionRadius);
+            _stateMachine.DrawDetectionRadius();
         }
 
         private void CheckPatrolPoints()

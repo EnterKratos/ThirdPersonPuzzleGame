@@ -26,5 +26,9 @@ namespace EnterKratos.States
         public virtual void OnDrawGizmos()
         {
         }
+
+        public virtual void HandleEvent(int eventType)
+        {
+        }
     }
 }

@@ -10,7 +10,7 @@ namespace EnterKratos
         protected virtual T InitialState => default;
         protected readonly Dictionary<T, BaseState<T>> States = new();
         private T _currentState;
-        private BaseState<T> CurrentState => States.ContainsKey(_currentState) ? States[_currentState] : null;
+        protected BaseState<T> CurrentState => States.ContainsKey(_currentState) ? States[_currentState] : null;
 
         public void ChangeState(T state)
         {
