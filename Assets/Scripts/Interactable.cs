@@ -1,6 +1,6 @@
+using EnterKratos.Extensions;
 using EnterKratos.ScriptableObjects;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace EnterKratos
 {
@@ -12,7 +12,6 @@ namespace EnterKratos
         [SerializeField]
         private GameEvent onInteract;
 
-        private const string PlayerTag = "Player";
         private bool _inRange;
 
         public void Interact()
@@ -25,15 +24,12 @@ namespace EnterKratos
 
         private void Awake()
         {
-            if (!collider.isTrigger)
-            {
-                Debug.LogError("Collider must be a trigger");
-            }
+            collider.AssertTrigger();
         }
 
         private void OnTriggerEnter(Collider other)
         {
-            if (other.CompareTag(PlayerTag))
+            if (other.gameObject.IsPlayer())
             {
                 _inRange = true;
             }
@@ -41,7 +37,7 @@ namespace EnterKratos
 
         private void OnTriggerExit(Collider other)
         {
-            if (other.CompareTag(PlayerTag))
+            if (other.gameObject.IsPlayer())
             {
                 _inRange = false;
             }

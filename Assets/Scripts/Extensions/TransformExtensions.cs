@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EnterKratos
+namespace EnterKratos.Extensions
 {
     public static class TransformExtensions
     {
