@@ -36,7 +36,7 @@ namespace EnterKratos
 
         private void OnTriggerExit(Collider other)
         {
-            if (!resetOnExit && !other.gameObject.IsPlayer())
+            if (!resetOnExit || !other.gameObject.IsPlayer())
             {
                 return;
             }
