@@ -1113,8 +1113,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MoveSpeed: 2
-  SprintSpeed: 5.335
+  MoveSpeed: 5
+  SprintSpeed: 8.67
   RotationSmoothTime: 0.12
   SpeedChangeRate: 10
   LandingAudioClip: {fileID: 8300000, guid: ff697d3070687ce4583faa0561a145a2, type: 3}
@@ -1178,6 +1178,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  interactEvent: {fileID: 0}
   analogMovement: 0
   cursorLocked: 0
   cursorInputForLook: 1
@@ -1288,9 +1289,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f59f26aac15408eafe14c4e13d62a39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 11400000, guid: e397425d542a5744493203d98aaf32be, type: 2}
-  playerDamagedEvent: {fileID: 11400000, guid: dee674335d6c5754585cc54567e32d27, type: 2}
-  playerDiedEvent: {fileID: 11400000, guid: e49857f854e3a6e469f931b265a58813, type: 2}
+  killable:
+    mode: 0
+    unityReference: {fileID: 0}
+    rawReference:
+      rid: -2
+  damagedEvent: {fileID: 0}
+  diedEvent: {fileID: 0}
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
 --- !u!1 &4523139366846529165
 GameObject:
   m_ObjectHideFlags: 0
