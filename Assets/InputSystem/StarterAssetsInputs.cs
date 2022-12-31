@@ -48,7 +48,10 @@ namespace StarterAssets
 
 		public void OnInteract(InputValue value)
 		{
-			interactEvent.Raise();
+			if (value.isPressed)
+			{
+				interactEvent.Raise();
+			}
 		}
 #endif
 
