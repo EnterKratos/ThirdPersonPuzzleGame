@@ -1,14 +1,16 @@
-﻿using UnityEngine;
+﻿using System.Collections.Generic;
+using System.Linq;
+using UnityEngine;
 
 namespace EnterKratos.Extensions
 {
     public static class ColliderExtensions
     {
-        public static void AssertTrigger(this Collider collider)
+        public static void AssertTrigger(this IEnumerable<Collider> colliders)
         {
-            if (!collider.isTrigger)
+            if (!colliders.Any(c => c.isTrigger))
             {
-                Debug.LogError("Collider must be a trigger");
+                Debug.LogError("Object must contain a collider that is a trigger");
             }
         }
     }

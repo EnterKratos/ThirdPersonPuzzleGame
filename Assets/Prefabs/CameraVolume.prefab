@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 6625830998595896019}
   - component: {fileID: 7926879901879673659}
-  - component: {fileID: 2850584380231699293}
+  - component: {fileID: 8266181502545845043}
+  - component: {fileID: 5996278824996958650}
   m_Layer: 0
   m_Name: CameraVolume
   m_TagString: Untagged
@@ -46,7 +47,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &2850584380231699293
+--- !u!114 &8266181502545845043
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,10 +56,49 @@ MonoBehaviour:
   m_GameObject: {fileID: 6819205765838913024}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3436561704e47b741b095c178fcb3b04, type: 3}
+  m_Script: {fileID: 11500000, guid: b84e4c62bfb5488b8eb4f1f23d45a1eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   virtualCamera: {fileID: 0}
-  collider: {fileID: 7926879901879673659}
-  desiredPriority: 20
-  resetOnExit: 1
+--- !u!114 &5996278824996958650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6819205765838913024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f2f56787d3a4de4b7a30ef05c7bad7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8266181502545845043}
+        m_TargetAssemblyTypeName: EnterKratos.CameraPriorityUpdater, Assembly-CSharp
+        m_MethodName: UpdatePriority
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 20
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPlayerExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8266181502545845043}
+        m_TargetAssemblyTypeName: EnterKratos.CameraPriorityUpdater, Assembly-CSharp
+        m_MethodName: Reset
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

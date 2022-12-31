@@ -10,7 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1473172573097565517}
   - component: {fileID: 9123854199268812240}
-  - component: {fileID: 5791839288573537097}
+  - component: {fileID: 5577244933641895215}
+  - component: {fileID: 2788488452205221771}
   m_Layer: 0
   m_Name: ParentVolume
   m_TagString: Untagged
@@ -46,7 +47,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.8421398, y: 1.1710429, z: 5.033142}
   m_Center: {x: 0.20792538, y: 0.5, z: 0.1033058}
---- !u!114 &5791839288573537097
+--- !u!114 &5577244933641895215
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -55,6 +56,48 @@ MonoBehaviour:
   m_GameObject: {fileID: 8273104961598796356}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e27445e9a76d4d728d4c5b336dbd2302, type: 3}
+  m_Script: {fileID: 11500000, guid: 6f2f56787d3a4de4b7a30ef05c7bad7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onPlayerEnter:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2788488452205221771}
+        m_TargetAssemblyTypeName: EnterKratos.ColliderParent, Assembly-CSharp
+        m_MethodName: SetAsColliderParent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPlayerExit:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2788488452205221771}
+        m_TargetAssemblyTypeName: EnterKratos.ColliderParent, Assembly-CSharp
+        m_MethodName: Unparent
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &2788488452205221771
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8273104961598796356}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64fcdc1296114fcd9311a4c2f980a615, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

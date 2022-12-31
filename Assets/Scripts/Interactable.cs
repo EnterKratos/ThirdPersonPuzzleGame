@@ -4,11 +4,9 @@ using UnityEngine;
 
 namespace EnterKratos
 {
+    [RequireComponent(typeof(Collider))]
     public class Interactable : MonoBehaviour
     {
-        [SerializeField]
-        private new Collider collider;
-
         [SerializeField]
         private GameEvent onInteract;
 
@@ -41,7 +39,7 @@ namespace EnterKratos
 
         private void Awake()
         {
-            collider.AssertTrigger();
+            GetComponents<Collider>().AssertTrigger();
         }
 
         private void OnTriggerEnter(Collider other)
