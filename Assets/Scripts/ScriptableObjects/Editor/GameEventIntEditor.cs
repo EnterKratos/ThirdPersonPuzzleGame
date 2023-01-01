@@ -11,13 +11,12 @@ namespace EnterKratos.ScriptableObjects.Editor
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
-            DrawDefaultInspector();
 
             _currentEventValue = EditorGUILayout.IntField("Event Value", _currentEventValue);
 
             if (GUILayout.Button("Fire Event"))
             {
-                ((GameEventInt)target).Raise(_currentEventValue);
+                ((GameEventInt)target)?.Raise(_currentEventValue);
             }
         }
     }
