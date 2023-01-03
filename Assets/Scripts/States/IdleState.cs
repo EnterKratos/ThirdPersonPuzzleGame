@@ -23,7 +23,10 @@ namespace EnterKratos.States
         private IEnumerator Timer()
         {
             yield return new WaitForSeconds(_blackboard.idleWaitTime);
-            StateMachine.ChangeState(EnemyState.Patrol);
+            if (_blackboard.patrolPointProvider.Value.PatrolRouteIsValid())
+            {
+                StateMachine.ChangeState(EnemyState.Patrol);
+            } else StateMachine.StartCoroutine(Timer());
         }
     }
 }

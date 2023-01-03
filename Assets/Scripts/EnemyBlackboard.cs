@@ -1,5 +1,6 @@
 ﻿using System;
 using EnterKratos.ScriptableObjects;
+using TNRD;
 using UnityEngine;
 using UnityEngine.AI;
 
@@ -13,9 +14,8 @@ namespace EnterKratos
         public Animator animator;
         public Transform player;
         public float idleWaitTime;
-        public float patrolPointTolerance;
-        public Transform[] patrolPoints;
         public LayerMask playerDetectionMask;
+        public SerializableInterface<IPatrolPointProvider> patrolPointProvider;
         public static readonly int MovingParam = Animator.StringToHash("Moving");
         public static readonly int AttackParam = Animator.StringToHash("Attack");
     }

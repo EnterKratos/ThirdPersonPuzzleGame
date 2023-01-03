@@ -1,9 +1,11 @@
-﻿using EnterKratos.States;
+﻿using System;
+using EnterKratos.States;
+using JetBrains.Annotations;
 using UnityEngine;
 
 namespace EnterKratos
 {
-    public class EnemyStateMachine: StateMachine<EnemyState>
+    public class EnemyStateMachine: StateMachine<EnemyState>, IPatrol
     {
         [SerializeField]
         private EnemyState initialState;
@@ -11,6 +13,20 @@ namespace EnterKratos
         [SerializeField]
         private EnemyBlackboard blackboard;
 
+        public PatrolPoint TargetPatrolPoint
+        {
+            get
+            {
+                if (CurrentState is IPatrol patrol)
+                {
+                    return patrol.TargetPatrolPoint;
+                }
+
+                throw new InvalidOperationException("Only valid in patrol state");
+            }
+        }
+
+        [UsedImplicitly]
         public void AnimationEventAttack()
         {
             CurrentState.HandleEvent((int)EnemyAnimationEvents.Attack);
@@ -26,6 +42,11 @@ namespace EnterKratos
         {
             Gizmos.color = blackboard.enemy.attackGizmoColour;
             Gizmos.DrawWireSphere(transform.position, blackboard.enemy.attackRadius);
+        }
+
+        public void Arrived()
+        {
+            ((IPatrol)CurrentState)?.Arrived();
         }
 
         private void Awake()

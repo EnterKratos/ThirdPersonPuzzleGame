@@ -2,13 +2,14 @@
 
 namespace EnterKratos.States
 {
-    public class PatrolState: BaseState<EnemyState>
+    public class PatrolState: BaseState<EnemyState>, IPatrol
     {
         private readonly EnemyBlackboard _blackboard;
-        private int _targetPatrolPointIndex;
-        private int _nextPatrolPointIndex;
         private readonly Collider[] _colliderBuffer;
         private readonly EnemyStateMachine _stateMachine;
+        private readonly PatrolManager _patrolManager;
+
+        public PatrolPoint TargetPatrolPoint { get; private set; }
 
         public PatrolState(EnemyStateMachine stateMachine, EnemyBlackboard blackboard)
             : base(stateMachine)
@@ -16,6 +17,7 @@ namespace EnterKratos.States
             _stateMachine = stateMachine;
             _blackboard = blackboard;
             _colliderBuffer = new Collider[PlayerDetection.BufferSize];
+            _patrolManager = new PatrolManager(_blackboard.patrolPointProvider.Value);
         }
 
         public override void Enter()
@@ -23,17 +25,13 @@ namespace EnterKratos.States
             base.Enter();
             _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, true);
 
-            _targetPatrolPointIndex = _nextPatrolPointIndex;
-            _blackboard.navMeshAgent.GoToPoint(_blackboard.patrolPoints[_targetPatrolPointIndex].position);
-
-            _nextPatrolPointIndex = _targetPatrolPointIndex != _blackboard.patrolPoints.Length - 1 ?
-                _nextPatrolPointIndex + 1 : 0;
+            TargetPatrolPoint = _patrolManager.Next();
+            _blackboard.navMeshAgent.GoToPoint(TargetPatrolPoint.transform.position);
         }
 
         public override void Update()
         {
             base.Update();
-            CheckPatrolPoints();
 
             if (PlayerDetection.DetectPlayer(StateMachine.transform.position, _blackboard.enemy.detectionRadius,
                     _colliderBuffer, _blackboard.playerDetectionMask))
@@ -54,14 +52,9 @@ namespace EnterKratos.States
             _stateMachine.DrawDetectionRadius();
         }
 
-        private void CheckPatrolPoints()
+        public void Arrived()
         {
-            var distance = Vector3.Distance(StateMachine.transform.position, _blackboard.patrolPoints[_targetPatrolPointIndex].position);
-
-            if (distance <= _blackboard.patrolPointTolerance)
-            {
-                StateMachine.ChangeState(EnemyState.Idle);
-            }
+            StateMachine.ChangeState(EnemyState.Idle);
         }
     }
 }

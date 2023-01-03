@@ -1,19 +1,25 @@
-﻿using UnityEngine;
+﻿using EnterKratos.Extensions;
+using UnityEngine;
 
 namespace EnterKratos
 {
+    [RequireComponent(typeof(Collider))]
     public class PatrolPoint : MonoBehaviour
     {
-        [SerializeField]
-        private float radius = 1;
-
-        [SerializeField]
-        private Color colour = Color.green;
-
-        private void OnDrawGizmosSelected()
+        private void Awake()
         {
-            Gizmos.color = colour;
-            Gizmos.DrawWireSphere(transform.position, radius);
+            GetComponents<Collider>().AssertTrigger();
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            var patrol = other.GetComponent<IPatrol>();
+            if (patrol == null || this != patrol.TargetPatrolPoint)
+            {
+                return;
+            }
+
+            patrol.Arrived();
         }
     }
 }
