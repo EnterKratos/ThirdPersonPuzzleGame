@@ -1,5 +1,4 @@
-﻿using System.Linq;
-using EnterKratos.Extensions;
+﻿using EnterKratos.Extensions;
 using UnityEngine;
 
 namespace EnterKratos.States
@@ -37,7 +36,7 @@ namespace EnterKratos.States
 
             var playerInDetectionRadius =
                 PlayerDetection.DetectPlayer(position, enemy.detectionRadius, _colliderBuffer, detectionMask);
-            if (!playerInDetectionRadius)
+            if (!playerInDetectionRadius || _blackboard.PlayerHealthSystem.Dead)
             {
                 StateMachine.ChangeState(EnemyState.Patrol);
                 return;
@@ -69,7 +68,7 @@ namespace EnterKratos.States
                 {
                     if (_playerInAttackRadius)
                     {
-                        _colliderBuffer.First().GetComponent<HealthSystem>().Attack(_blackboard.enemy.attackDamage);
+                        _blackboard.PlayerHealthSystem.Attack(_blackboard.enemy.attackDamage);
                     }
                     break;
                 }

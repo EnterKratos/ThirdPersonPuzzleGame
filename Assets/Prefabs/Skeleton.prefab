@@ -994,13 +994,6 @@ MonoBehaviour:
     animator: {fileID: 9123827032212939856}
     player: {fileID: 0}
     idleWaitTime: 2
-    patrolPointTolerance: 0.3
-    patrolPoints:
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
-    - {fileID: 0}
     playerDetectionMask:
       serializedVersion: 2
       m_Bits: 256

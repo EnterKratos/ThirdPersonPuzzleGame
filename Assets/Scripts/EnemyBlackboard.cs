@@ -18,5 +18,11 @@ namespace EnterKratos
         public SerializableInterface<IPatrolPointProvider> patrolPointProvider;
         public static readonly int MovingParam = Animator.StringToHash("Moving");
         public static readonly int AttackParam = Animator.StringToHash("Attack");
+        public HealthSystem PlayerHealthSystem { get; private set; }
+
+        public void OnEnable()
+        {
+            PlayerHealthSystem = player.GetComponent<HealthSystem>();
+        }
     }
 }

@@ -13,6 +13,11 @@ namespace EnterKratos
         [SerializeField]
         private EnemyBlackboard blackboard;
 
+        private void OnEnable()
+        {
+            blackboard.OnEnable();
+        }
+
         public PatrolPoint TargetPatrolPoint
         {
             get

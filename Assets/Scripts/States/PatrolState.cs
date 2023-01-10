@@ -33,6 +33,11 @@ namespace EnterKratos.States
         {
             base.Update();
 
+            if (_blackboard.PlayerHealthSystem.Dead)
+            {
+                return;
+            }
+
             if (PlayerDetection.DetectPlayer(StateMachine.transform.position, _blackboard.enemy.detectionRadius,
                     _colliderBuffer, _blackboard.playerDetectionMask))
             {
