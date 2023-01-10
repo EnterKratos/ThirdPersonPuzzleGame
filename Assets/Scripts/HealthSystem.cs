@@ -16,6 +16,8 @@ namespace EnterKratos
         [SerializeField]
         private GameEvent diedEvent;
 
+        public bool Dead => _health <= 0;
+
         private bool _dead;
         private int _health;
         private bool _coolingDown;
@@ -37,7 +39,7 @@ namespace EnterKratos
             _coolingDown = true;
             StartCoroutine(CooldownTimer());
 
-            if (_health <= 0)
+            if (Dead)
             {
                 diedEvent.Raise();
                 _dead = true;
