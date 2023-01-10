@@ -46,7 +46,7 @@ namespace EnterKratos
 
         public void Arrived()
         {
-            ((IPatrol)CurrentState)?.Arrived();
+            (CurrentState as IPatrol)?.Arrived();
         }
 
         private void Awake()
