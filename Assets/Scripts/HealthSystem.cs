@@ -15,6 +15,9 @@ namespace EnterKratos
 
         [SerializeField]
         private GameEvent diedEvent;
+        
+        [SerializeField]
+        private bool invulnerable;
 
         public bool Dead => _health <= 0;
 
@@ -29,7 +32,7 @@ namespace EnterKratos
 
         public void Attack(int amount)
         {
-            if (_coolingDown || _dead)
+            if (_coolingDown || _dead || invulnerable)
             {
                 return;
             }
