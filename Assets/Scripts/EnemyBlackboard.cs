@@ -13,7 +13,6 @@ namespace EnterKratos
         public NavMeshAgent navMeshAgent;
         public Animator animator;
         public Transform player;
-        public float idleWaitTime;
         public LayerMask playerDetectionMask;
         public SerializableInterface<IPatrolPointProvider> patrolPointProvider;
         public static readonly int MovingParam = Animator.StringToHash("Moving");

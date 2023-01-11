@@ -49,7 +49,7 @@ namespace EnterKratos.States
 
         private IEnumerator Timer()
         {
-            yield return new WaitForSeconds(_blackboard.idleWaitTime);
+            yield return new WaitForSeconds(_blackboard.enemy.idleWaitTime);
             if (_blackboard.patrolPointProvider.Value.PatrolRouteIsValid())
             {
                 StateMachine.ChangeState(EnemyState.Patrol);
