@@ -4,7 +4,7 @@ using UnityEngine;
 namespace EnterKratos.Editor
 {
     [CustomEditor(typeof(HealthSystem))]
-    public class GameEventEditor : UnityEditor.Editor
+    public class HealthSystemEditor : UnityEditor.Editor
     {
         private bool _displayDebugFields;
         private int _attackValue;
