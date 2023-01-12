@@ -13,6 +13,7 @@ namespace StarterAssets
 		public Vector2 look;
 		public bool jump;
 		public bool sprint;
+		public bool attack;
 		public GameEvent interactEvent;
 
 		[Header("Movement Settings")]
@@ -46,6 +47,11 @@ namespace StarterAssets
 			SprintInput(value.isPressed);
 		}
 
+		public void OnAttack(InputValue value)
+		{
+			AttackInput(value.isPressed);
+		}
+
 		public void OnInteract(InputValue value)
 		{
 			if (value.isPressed)
@@ -74,6 +80,11 @@ namespace StarterAssets
 		public void SprintInput(bool newSprintState)
 		{
 			sprint = newSprintState;
+		}
+
+		public void AttackInput(bool newAttackState)
+		{
+			attack = newAttackState;
 		}
 
 		private void OnApplicationFocus(bool hasFocus)
