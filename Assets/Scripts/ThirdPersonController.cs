@@ -10,7 +10,7 @@ using UnityEngine.InputSystem;
 
 namespace StarterAssets
 {
-    [RequireComponent(typeof(CharacterController), typeof(HealthSystem))]
+    [RequireComponent(typeof(CharacterController), typeof(HealthSystem), typeof(AttackSystem))]
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
     [RequireComponent(typeof(PlayerInput))]
 #endif
@@ -89,6 +89,7 @@ namespace StarterAssets
         private float _verticalVelocity;
         private float _terminalVelocity = 53.0f;
         private HealthSystem _healthSystem;
+        private AttackSystem _attackSystem;
 
         // timeout deltatime
         private float _jumpTimeoutDelta;
@@ -126,7 +127,6 @@ namespace StarterAssets
             }
         }
 
-
         private void Awake()
         {
             // get a reference to our main camera
@@ -144,6 +144,7 @@ namespace StarterAssets
             _controller = GetComponent<CharacterController>();
             _input = GetComponent<StarterAssetsInputs>();
             _healthSystem = GetComponent<HealthSystem>();
+            _attackSystem = GetComponent<AttackSystem>();
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED
             _playerInput = GetComponent<PlayerInput>();
 #else
@@ -298,7 +299,10 @@ namespace StarterAssets
                 return;
             }
 
-            _animator.SetBool(_animIDAttack, true);
+            if (_attackSystem.Attack())
+            {
+                _animator.SetBool(_animIDAttack, true);
+            }
         }
 
         private void JumpAndGravity()

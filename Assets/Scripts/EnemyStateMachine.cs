@@ -54,12 +54,18 @@ namespace EnterKratos
             (CurrentState as IPatrol)?.Arrived();
         }
 
+        public void Die()
+        {
+            ChangeState(EnemyState.Death);
+        }
+
         private void Awake()
         {
             States[EnemyState.Idle] = new IdleState(this, blackboard);
             States[EnemyState.Patrol] = new PatrolState(this, blackboard);
             States[EnemyState.Chase] = new ChaseState(this, blackboard);
             States[EnemyState.Attack] = new AttackState(this, blackboard);
+            States[EnemyState.Death] = new DeathState(this, blackboard);
         }
 
         protected override EnemyState InitialState => initialState;

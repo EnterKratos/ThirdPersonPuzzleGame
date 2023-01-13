@@ -158,6 +158,7 @@ MonoBehaviour:
   look: {x: 0, y: 0}
   jump: 0
   sprint: 0
+  attack: 0
   interactEvent: {fileID: 11400000, guid: 1ae8c4fc47b92be4b8653ec9a2f7c679, type: 2}
   analogMovement: 0
   cursorLocked: 0
@@ -338,7 +339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 99bb6c25918d4d74b1c64517bad0519a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponSpawnPoint: {fileID: 0}
+  weaponSpawnPoint: {fileID: 6792070748228095232}
 --- !u!1 &5652144348543826726
 GameObject:
   m_ObjectHideFlags: 0

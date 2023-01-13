@@ -1,4 +1,4 @@
-using EnterKratos.ScriptableObjects;
+using TNRD;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -10,11 +10,11 @@ namespace EnterKratos
         private Slider slider;
 
         [SerializeField]
-        private Player player;
+        private SerializableInterface<IKillable> killable;
 
         private void OnEnable()
         {
-            slider.maxValue = player.maxHealth;
+            slider.maxValue = killable.Value.MaxHealth;
         }
 
         public void DecreaseProgress(int value)

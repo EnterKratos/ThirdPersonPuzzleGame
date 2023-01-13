@@ -6,6 +6,7 @@
         Idle,
         Patrol,
         Attack,
-        Chase
+        Chase,
+        Death
     }
 }

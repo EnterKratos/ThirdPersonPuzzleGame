@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace EnterKratos
 {
+    [DisallowMultipleComponent]
     public class HealthSystem : MonoBehaviour
     {
         [SerializeField]
@@ -38,15 +39,23 @@ namespace EnterKratos
             }
 
             _health -= amount;
-            damagedEvent.Raise(amount);
+            if (damagedEvent)
+            {
+                damagedEvent.Raise(amount);
+            }
             _coolingDown = true;
             StartCoroutine(CooldownTimer());
 
-            if (Dead)
+            if (!Dead)
+            {
+                return;
+            }
+
+            if (diedEvent)
             {
                 diedEvent.Raise();
-                _dead = true;
             }
+            _dead = true;
         }
 
         private IEnumerator CooldownTimer()
