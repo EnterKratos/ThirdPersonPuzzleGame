@@ -22,4 +22,4 @@ MonoBehaviour:
   chaseTimeout: 30
   maxHealth: 100
   damageCooldown: 1
-  deathTimeout: 4
+  deathTimeout: 0.5
