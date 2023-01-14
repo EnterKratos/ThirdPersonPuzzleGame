@@ -18,6 +18,7 @@ GameObject:
   - component: {fileID: 4452506135962899785}
   - component: {fileID: 1376118205511178918}
   - component: {fileID: 6792070748923123790}
+  - component: {fileID: 7239038942944071935}
   m_Layer: 8
   m_Name: PlayerViking
   m_TagString: Player
@@ -54,7 +55,7 @@ Animator:
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: cdc117041f6e6d1498cd12c262e66194, type: 3}
   m_Controller: {fileID: 9100000, guid: 4f2fb056dbc41764aa5df3da1cf14423, type: 2}
-  m_CullingMode: 0
+  m_CullingMode: 2
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
@@ -340,6 +341,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weaponSpawnPoint: {fileID: 6792070748228095232}
+--- !u!114 &7239038942944071935
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37832422919389821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c42cc0277394689ae4c04975696a72f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 0}
 --- !u!1 &5652144348543826726
 GameObject:
   m_ObjectHideFlags: 0
