@@ -2,6 +2,7 @@
 using EnterKratos.ScriptableObjects;
 using TNRD;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace EnterKratos
 {
@@ -15,7 +16,13 @@ namespace EnterKratos
         private GameEventInt damagedEvent;
 
         [SerializeField]
+        private UnityEvent<int> damagedUnityEvent;
+
+        [SerializeField]
         private GameEvent diedEvent;
+
+        [SerializeField]
+        private UnityEvent diedUnityEvent;
         
         [SerializeField]
         private bool invulnerable;
@@ -43,6 +50,7 @@ namespace EnterKratos
             {
                 damagedEvent.Raise(amount);
             }
+            damagedUnityEvent.Invoke(amount);
             _coolingDown = true;
             StartCoroutine(CooldownTimer());
 
@@ -55,6 +63,7 @@ namespace EnterKratos
             {
                 diedEvent.Raise();
             }
+            diedUnityEvent.Invoke();
             _dead = true;
         }
 
