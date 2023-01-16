@@ -21,5 +21,10 @@ namespace EnterKratos
         {
             slider.value -= value;
         }
+
+        public void IncreaseProgress(int value)
+        {
+            slider.value += value;
+        }
     }
 }

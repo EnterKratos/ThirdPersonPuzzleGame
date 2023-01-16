@@ -120,7 +120,7 @@ MonoBehaviour:
   GroundedRadius: 0.28
   GroundLayers:
     serializedVersion: 2
-    m_Bits: 1537
+    m_Bits: 1665
   CinemachineCameraTarget: {fileID: 5652144348543826726}
   TopClamp: 70
   BottomClamp: -30
@@ -293,7 +293,17 @@ MonoBehaviour:
     rawReference:
       rid: -2
   damagedEvent: {fileID: 11400000, guid: dee674335d6c5754585cc54567e32d27, type: 2}
+  damagedUnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  healedEvent: {fileID: 11400000, guid: d39798be6f404544b8c943bdb8c69100, type: 2}
+  healedUnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   diedEvent: {fileID: 11400000, guid: e49857f854e3a6e469f931b265a58813, type: 2}
+  diedUnityEvent:
+    m_PersistentCalls:
+      m_Calls: []
   invulnerable: 0
   references:
     version: 2

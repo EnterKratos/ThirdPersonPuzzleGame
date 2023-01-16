@@ -1010,7 +1010,9 @@ GameObject:
   - component: {fileID: 2326698209489726980}
   - component: {fileID: 5068027904156160512}
   - component: {fileID: 2062009481352367843}
-  m_Layer: 0
+  - component: {fileID: 4858613619908245075}
+  - component: {fileID: 3002303526804594173}
+  m_Layer: 11
   m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1138,6 +1140,100 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &4858613619908245075
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951523993986096227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f59f26aac15408eafe14c4e13d62a39, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  killable:
+    mode: 0
+    unityReference: {fileID: 11400000, guid: e7d41258cb5701242b707bf2eda37598, type: 2}
+    rawReference:
+      rid: -2
+  damagedEvent: {fileID: 0}
+  damagedUnityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5017710430535168056}
+        m_TargetAssemblyTypeName: EnterKratos.HealthBar, Assembly-CSharp
+        m_MethodName: DecreaseProgress
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  diedEvent: {fileID: 0}
+  diedUnityEvent:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9123827032212939856}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Die
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 5068027904156160512}
+        m_TargetAssemblyTypeName: EnterKratos.EnemyStateMachine, Assembly-CSharp
+        m_MethodName: Die
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 3002303526804594173}
+        m_TargetAssemblyTypeName: EnterKratos.ItemDrop, Assembly-CSharp
+        m_MethodName: Drop
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  invulnerable: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+--- !u!114 &3002303526804594173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4951523993986096227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4edc06af1244d9b4db65b1417ab0b0e9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 8239501822014819757, guid: ec2478547450ca04286002da19ee396d, type: 3}
+  directionalForce: 5
+  upwardForce: 2
 --- !u!1 &5024614962486458683
 GameObject:
   m_ObjectHideFlags: 0
@@ -2039,6 +2135,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 22ddff1c1ca933e4dbfc67a83b1bc399, type: 3}
+--- !u!114 &5017710430535168056 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3611307414430345924, guid: 22ddff1c1ca933e4dbfc67a83b1bc399,
+    type: 3}
+  m_PrefabInstance: {fileID: 8628771509739510524}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e1205f39d2a5f14292e3ab8ef4c562e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &7584205860609043280 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2233520384269971884, guid: 22ddff1c1ca933e4dbfc67a83b1bc399,

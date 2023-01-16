@@ -19,11 +19,17 @@ namespace EnterKratos
         private UnityEvent<int> damagedUnityEvent;
 
         [SerializeField]
+        private GameEventInt healedEvent;
+
+        [SerializeField]
+        private UnityEvent<int> healedUnityEvent;
+
+        [SerializeField]
         private GameEvent diedEvent;
 
         [SerializeField]
         private UnityEvent diedUnityEvent;
-        
+
         [SerializeField]
         private bool invulnerable;
 
@@ -45,7 +51,8 @@ namespace EnterKratos
                 return;
             }
 
-            _health -= amount;
+            _health = ClampHealth(_health - amount);
+
             if (damagedEvent)
             {
                 damagedEvent.Raise(amount);
@@ -65,6 +72,27 @@ namespace EnterKratos
             }
             diedUnityEvent.Invoke();
             _dead = true;
+        }
+
+        public void Heal(int amount)
+        {
+            if (Dead)
+            {
+                return;
+            }
+
+            _health = ClampHealth(_health + amount);
+
+            if (healedEvent)
+            {
+                healedEvent.Raise(amount);
+            }
+            healedUnityEvent.Invoke(amount);
+        }
+
+        private int ClampHealth(int value)
+        {
+            return Mathf.Clamp(value, 0, killable.Value.MaxHealth);
         }
 
         private IEnumerator CooldownTimer()
