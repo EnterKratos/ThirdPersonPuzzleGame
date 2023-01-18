@@ -20,3 +20,6 @@ MonoBehaviour:
   rotationSpeed: 10
   idleWaitTime: 4
   chaseTimeout: 5
+  maxHealth: 100
+  damageCooldown: 1
+  deathTimeout: 0

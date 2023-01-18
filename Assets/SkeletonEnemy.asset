@@ -18,8 +18,8 @@ MonoBehaviour:
   attackGizmoColour: {r: 1, g: 0, b: 0, a: 1}
   attackDamage: 10
   rotationSpeed: 10
-  idleWaitTime: 4
-  chaseTimeout: 30
+  idleWaitTime: 6
+  chaseTimeout: 15
   maxHealth: 100
   damageCooldown: 1
   deathTimeout: 0.5
