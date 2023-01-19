@@ -9,6 +9,7 @@ namespace EnterKratos.States
         private readonly Collider[] _colliderBuffer;
         private readonly EnemyStateMachine _stateMachine;
         private Coroutine _chaseTimer;
+        private float _backupStoppingDistance;
 
         public ChaseState(EnemyStateMachine stateMachine, EnemyBlackboard blackboard)
             : base(stateMachine)
@@ -22,6 +23,8 @@ namespace EnterKratos.States
         {
             base.Enter();
             _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, true);
+            _backupStoppingDistance = _blackboard.navMeshAgent.stoppingDistance;
+            _blackboard.navMeshAgent.stoppingDistance = _blackboard.enemy.chaseStoppingDistance;
         }
 
         public override void Update()
@@ -61,6 +64,7 @@ namespace EnterKratos.States
         {
             base.Exit();
             _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, false);
+            _blackboard.navMeshAgent.stoppingDistance = _backupStoppingDistance;
         }
 
         public override void OnDrawGizmos()

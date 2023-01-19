@@ -13,6 +13,9 @@ namespace EnterKratos.ScriptableObjects
         public float rotationSpeed;
         public float idleWaitTime;
         public float chaseTimeout;
+        public float chaseStoppingDistance;
+        public float attackStoppingDistance;
+        public float patrolStoppingDistance;
         public int maxHealth;
         public int MaxHealth => maxHealth;
         public int damageCooldown;

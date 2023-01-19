@@ -9,6 +9,7 @@ namespace EnterKratos.States
         private readonly Collider[] _colliderBuffer;
         private bool _playerInAttackRadius;
         private readonly EnemyStateMachine _stateMachine;
+        private float _backupStoppingDistance;
 
         public AttackState(EnemyStateMachine stateMachine, EnemyBlackboard blackboard)
             : base(stateMachine)
@@ -22,6 +23,8 @@ namespace EnterKratos.States
         {
             base.Enter();
             _blackboard.animator.SetTrigger(EnemyBlackboard.AttackParam);
+            _backupStoppingDistance = _blackboard.navMeshAgent.stoppingDistance;
+            _blackboard.navMeshAgent.stoppingDistance = _blackboard.enemy.attackStoppingDistance;
         }
 
         public override void Update()
@@ -57,6 +60,7 @@ namespace EnterKratos.States
         {
             base.Exit();
             _blackboard.animator.SetBool(EnemyBlackboard.AttackParam, false);
+            _blackboard.navMeshAgent.stoppingDistance = _backupStoppingDistance;
         }
 
         public override void HandleEvent(int eventType)

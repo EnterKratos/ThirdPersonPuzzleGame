@@ -16,10 +16,13 @@ MonoBehaviour:
   detectionGizmoColour: {r: 1, g: 0.64705884, b: 0, a: 1}
   attackRadius: 1.5
   attackGizmoColour: {r: 1, g: 0, b: 0, a: 1}
-  attackDamage: 10
+  attackDamage: 5
   rotationSpeed: 10
   idleWaitTime: 4
   chaseTimeout: 5
+  chaseStoppingDistance: 1.7
+  attackStoppingDistance: 1.7
+  patrolStoppingDistance: 0
   maxHealth: 100
   damageCooldown: 1
   deathTimeout: 0

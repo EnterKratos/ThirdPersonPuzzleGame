@@ -8,6 +8,7 @@ namespace EnterKratos.States
         private readonly Collider[] _colliderBuffer;
         private readonly EnemyStateMachine _stateMachine;
         private readonly PatrolManager _patrolManager;
+        private float _backupStoppingDistance;
 
         public PatrolPoint TargetPatrolPoint { get; private set; }
 
@@ -27,6 +28,8 @@ namespace EnterKratos.States
 
             TargetPatrolPoint = _patrolManager.Next();
             _blackboard.navMeshAgent.GoToPoint(TargetPatrolPoint.transform.position);
+            _backupStoppingDistance = _blackboard.navMeshAgent.stoppingDistance;
+            _blackboard.navMeshAgent.stoppingDistance = _blackboard.enemy.patrolStoppingDistance;
         }
 
         public override void Update()
@@ -49,6 +52,7 @@ namespace EnterKratos.States
         {
             base.Exit();
             _blackboard.animator.SetBool(EnemyBlackboard.MovingParam, false);
+            _blackboard.navMeshAgent.stoppingDistance = _backupStoppingDistance;
         }
 
         public override void OnDrawGizmos()

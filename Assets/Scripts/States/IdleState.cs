@@ -41,6 +41,12 @@ namespace EnterKratos.States
             StateMachine.ChangeState(EnemyState.Chase);
         }
 
+        public override void Exit()
+        {
+            base.Exit();
+            StateMachine.StopCoroutine(_timerCoroutine);
+        }
+
         public override void OnDrawGizmos()
         {
             base.OnDrawGizmos();
