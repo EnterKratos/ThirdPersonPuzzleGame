@@ -32,7 +32,7 @@ namespace EnterKratos.States
             var playerInDetectionRadius =
                 PlayerDetection.DetectPlayer(StateMachine.transform.position, _blackboard.enemy.detectionRadius,
                     _colliderBuffer, _blackboard.playerDetectionMask);
-            if (!playerInDetectionRadius && !_blackboard.PlayerHealthSystem.Dead)
+            if (!playerInDetectionRadius || !_blackboard.PlayerHealthSystem || _blackboard.PlayerHealthSystem.Dead)
             {
                 return;
             }
