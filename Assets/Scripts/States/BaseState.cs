@@ -2,7 +2,7 @@
 
 namespace EnterKratos.States
 {
-    public class BaseState<T> where T : Enum
+    public abstract class BaseState<T> where T : Enum
     {
         protected readonly StateMachine<T> StateMachine;
 

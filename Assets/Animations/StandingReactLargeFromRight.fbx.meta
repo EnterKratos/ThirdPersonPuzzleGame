@@ -1,0 +1,521 @@
+fileFormatVersion: 2
+guid: bd366f601f65b6740b4660b7e48f1bd2
+ModelImporter:
+  serializedVersion: 21300
+  internalIDToNameTable: []
+  externalObjects: {}
+  materials:
+    materialImportMode: 2
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    removeConstantScaleCurves: 1
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 3
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: mixamo.com
+      takeName: mixamo.com
+      internalID: -203655887218126122
+      firstFrame: 0
+      lastFrame: 53
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 00000000010000000100000000000000000000000100000001000000010000000100000000000000000000000100000001000000
+      curves: []
+      events: []
+      transformMask:
+      - path: 
+        weight: 1
+      - path: Hips_vC_green
+        weight: 1
+      - path: Hips_vC_green/LeftUpLeg_vC_green
+        weight: 1
+      - path: Hips_vC_green/LeftUpLeg_vC_green/LeftLeg_vC_green
+        weight: 1
+      - path: Hips_vC_green/LeftUpLeg_vC_green/LeftLeg_vC_green/LeftFoot_vC_green
+        weight: 1
+      - path: Hips_vC_green/LeftUpLeg_vC_green/LeftLeg_vC_green/LeftFoot_vC_green/LeftToeBase_vC_green
+        weight: 1
+      - path: Hips_vC_green/LeftUpLeg_vC_green/LeftLeg_vC_green/LeftFoot_vC_green/LeftToeBase_vC_green/LeftToe_End_vC_green
+        weight: 0
+      - path: Hips_vC_green/RightUpLeg_vC_green
+        weight: 1
+      - path: Hips_vC_green/RightUpLeg_vC_green/RightLeg_vC_green
+        weight: 1
+      - path: Hips_vC_green/RightUpLeg_vC_green/RightLeg_vC_green/RightFoot_vC_green
+        weight: 1
+      - path: Hips_vC_green/RightUpLeg_vC_green/RightLeg_vC_green/RightFoot_vC_green/RightToeBase_vC_green
+        weight: 1
+      - path: Hips_vC_green/RightUpLeg_vC_green/RightLeg_vC_green/RightFoot_vC_green/RightToeBase_vC_green/RightToe_End_vC_green
+        weight: 0
+      - path: Hips_vC_green/Spine_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/mixamo:shield
+        weight: 0
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/LeftShoulder_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/LeftShoulder_vC_green/LeftArm_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/LeftShoulder_vC_green/LeftArm_vC_green/LeftForeArm_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/LeftShoulder_vC_green/LeftArm_vC_green/LeftForeArm_vC_green/LeftHand_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/LeftShoulder_vC_green/LeftArm_vC_green/LeftForeArm_vC_green/LeftHand_vC_green/Lefttip_vC_green
+        weight: 0
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/Neck_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/Neck_vC_green/Head_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/Neck_vC_green/Head_vC_green/HeadTop_End_vC_green
+        weight: 0
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/RightShoulder_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/RightShoulder_vC_green/RightArm_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/RightShoulder_vC_green/RightArm_vC_green/RightForeArm_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/RightShoulder_vC_green/RightArm_vC_green/RightForeArm_vC_green/RightHand_vC_green
+        weight: 1
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/RightShoulder_vC_green/RightArm_vC_green/RightForeArm_vC_green/RightHand_vC_green/mixamo:sword
+        weight: 0
+      - path: Hips_vC_green/Spine_vC_green/Spine1_vC_green/Spine2_vC_green/RightShoulder_vC_green/RightArm_vC_green/RightForeArm_vC_green/RightHand_vC_green/Righttip_vC_green
+        weight: 0
+      maskType: 0
+      maskSource: {fileID: 31900000, guid: 663a453ac49c626419d0a516909277ed, type: 2}
+      additiveReferencePoseFrame: 0
+    isReadable: 0
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    nodeNameCollisionStrategy: 1
+    fileIdsGeneration: 2
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    keepQuads: 0
+    weldVertices: 1
+    bakeAxisConversion: 0
+    preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    optimizeBones: 1
+    meshOptimizationFlags: -1
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVMarginMethod: 1
+    secondaryUVMinLightmapResolution: 40
+    secondaryUVMinObjectScale: 1
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  referencedClips: []
+  importAnimation: 1
+  humanDescription:
+    serializedVersion: 3
+    human:
+    - boneName: Hips_vC_green
+      humanName: Hips
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftUpLeg_vC_green
+      humanName: LeftUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightUpLeg_vC_green
+      humanName: RightUpperLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftLeg_vC_green
+      humanName: LeftLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightLeg_vC_green
+      humanName: RightLowerLeg
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftFoot_vC_green
+      humanName: LeftFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightFoot_vC_green
+      humanName: RightFoot
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine_vC_green
+      humanName: Spine
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine1_vC_green
+      humanName: Chest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Neck_vC_green
+      humanName: Neck
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Head_vC_green
+      humanName: Head
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftShoulder_vC_green
+      humanName: LeftShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightShoulder_vC_green
+      humanName: RightShoulder
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftArm_vC_green
+      humanName: LeftUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightArm_vC_green
+      humanName: RightUpperArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftForeArm_vC_green
+      humanName: LeftLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightForeArm_vC_green
+      humanName: RightLowerArm
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftHand_vC_green
+      humanName: LeftHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightHand_vC_green
+      humanName: RightHand
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: LeftToeBase_vC_green
+      humanName: LeftToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: RightToeBase_vC_green
+      humanName: RightToes
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    - boneName: Spine2_vC_green
+      humanName: UpperChest
+      limit:
+        min: {x: 0, y: 0, z: 0}
+        max: {x: 0, y: 0, z: 0}
+        value: {x: 0, y: 0, z: 0}
+        length: 0
+        modified: 0
+    skeleton:
+    - name: StandingReactLargeFromRight(Clone)
+      parentName: 
+      position: {x: -0.043127045, y: -0.09700958, z: 0.0021055203}
+      rotation: {x: 0.045687355, y: 0.42304885, z: -0.054590907, w: 0.90330625}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Hips_vC_green
+      parentName: StandingReactLargeFromRight(Clone)
+      position: {x: 0.0077793226, y: 0.4649223, z: -0.03187442}
+      rotation: {x: -0.19130576, y: -0.33628362, z: -0.06462407, w: 0.9198582}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine_vC_green
+      parentName: Hips_vC_green
+      position: {x: -0, y: 0.039623998, z: -0.002743}
+      rotation: {x: 0.16659306, y: -0.033626497, z: 0.03568601, w: 0.9848059}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine1_vC_green
+      parentName: Spine_vC_green
+      position: {x: -0, y: 0.10138799, z: 0.001878}
+      rotation: {x: 0.11580109, y: -0.07120931, z: 0.044189718, w: 0.9897306}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spine2_vC_green
+      parentName: Spine1_vC_green
+      position: {x: -0, y: 0.099809, z: 0.0017129999}
+      rotation: {x: -0.081341214, y: -0.082093656, z: 0.03478742, w: 0.9926903}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Neck_vC_green
+      parentName: Spine2_vC_green
+      position: {x: -0, y: 0.125435, z: 0.002444}
+      rotation: {x: -0.01669369, y: -0.057662923, z: 0.014082085, w: 0.99809724}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Head_vC_green
+      parentName: Neck_vC_green
+      position: {x: -0, y: 0.054766998, z: 0.000772}
+      rotation: {x: -0.037516166, y: -0.05796747, z: 0.012236006, w: 0.99753827}
+      scale: {x: 1, y: 1, z: 1}
+    - name: HeadTop_End_vC_green
+      parentName: Head_vC_green
+      position: {x: -0, y: 0.243102, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftShoulder_vC_green
+      parentName: Spine2_vC_green
+      position: {x: -0.117908, y: 0.07533, z: -0.012665}
+      rotation: {x: 0.64015216, y: -0.32610664, z: 0.45249954, w: 0.5283029}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftArm_vC_green
+      parentName: LeftShoulder_vC_green
+      position: {x: -0.011049, y: 0.083619, z: -0.001455}
+      rotation: {x: -0.15374677, y: 0.14986019, z: 0.057175614, w: 0.9750051}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftForeArm_vC_green
+      parentName: LeftArm_vC_green
+      position: {x: -0.001065, y: 0.133182, z: -0.0009839999}
+      rotation: {x: -0.0275144, y: 0.20007767, z: -0.077268384, w: 0.9763409}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftHand_vC_green
+      parentName: LeftForeArm_vC_green
+      position: {x: -0.012632, y: 0.118778, z: -0.000208}
+      rotation: {x: -0.036413804, y: -0.03937171, z: 0.034129012, w: 0.9979775}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lefttip_vC_green
+      parentName: LeftHand_vC_green
+      position: {x: 0.008895, y: 0.074508, z: -0.001201}
+      rotation: {x: -0.0019434206, y: -0.0000030866397, z: 0.0015882461, w: 0.9999969}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightShoulder_vC_green
+      parentName: Spine2_vC_green
+      position: {x: 0.12241999, y: 0.075783, z: -0.017904}
+      rotation: {x: 0.31870657, y: 0.5332042, z: -0.25024432, w: 0.74262863}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightArm_vC_green
+      parentName: RightShoulder_vC_green
+      position: {x: 0.016446, y: 0.061164998, z: 0.050857}
+      rotation: {x: -0.87863415, y: 0.22722068, z: 0.087763496, w: 0.41069493}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightForeArm_vC_green
+      parentName: RightArm_vC_green
+      position: {x: 0.000944, y: -0.132686, z: 0.000954}
+      rotation: {x: -0.03292077, y: 0.15247051, z: -0.06812082, w: 0.9854078}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightHand_vC_green
+      parentName: RightForeArm_vC_green
+      position: {x: 0.011122, y: -0.115724, z: 0.00017999999}
+      rotation: {x: -0.07281316, y: -0.08595477, z: -0.26899225, w: 0.9565319}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Righttip_vC_green
+      parentName: RightHand_vC_green
+      position: {x: -0.008895, y: -0.074508, z: 0.001201}
+      rotation: {x: -0.0019434206, y: -0.0000030866397, z: 0.0015882461, w: 0.9999969}
+      scale: {x: 1, y: 1, z: 1}
+    - name: mixamo:sword
+      parentName: RightHand_vC_green
+      position: {x: -0.07140106, y: -0.07308523, z: -0.0049344255}
+      rotation: {x: 0.513735, y: -0.505036, z: 0.48802176, w: 0.49279794}
+      scale: {x: 5.5982, y: 5.5982, z: 5.5982}
+    - name: mixamo:shield
+      parentName: Spine1_vC_green
+      position: {x: -0.000008, y: 0.032946013, z: -0.16088901}
+      rotation: {x: 0.028431073, y: -0, z: -0, w: 0.99959576}
+      scale: {x: 5.2507, y: 5.2507, z: 5.3671}
+    - name: LeftUpLeg_vC_green
+      parentName: Hips_vC_green
+      position: {x: -0.074441, y: -0.042106, z: 0.0030379998}
+      rotation: {x: -0.6275598, y: -0.06743728, z: 0.76746064, w: 0.11236167}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftLeg_vC_green
+      parentName: LeftUpLeg_vC_green
+      position: {x: 0.00059799996, y: 0.18667999, z: 0.00082099997}
+      rotation: {x: -0.28801888, y: -0.3024776, z: -0.04163086, w: 0.9076449}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftFoot_vC_green
+      parentName: LeftLeg_vC_green
+      position: {x: -0.00026499998, y: 0.125871, z: 0.0016760001}
+      rotation: {x: 0.73075044, y: -0.006853476, z: 0.12646708, w: 0.6707928}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftToeBase_vC_green
+      parentName: LeftFoot_vC_green
+      position: {x: 0.000032, y: 0.078903, z: -0.0031549998}
+      rotation: {x: 0.31957218, y: -0.0026004137, z: 0.06861263, w: 0.94507104}
+      scale: {x: 1, y: 1, z: 1}
+    - name: LeftToe_End_vC_green
+      parentName: LeftToeBase_vC_green
+      position: {x: -0.000119, y: 0.053749997, z: 0.000066}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightUpLeg_vC_green
+      parentName: Hips_vC_green
+      position: {x: 0.074439995, y: -0.042106, z: 0.0030379998}
+      rotation: {x: 0.25300136, y: -0.043015566, z: 0.9540989, w: -0.15438712}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightLeg_vC_green
+      parentName: RightUpLeg_vC_green
+      position: {x: 0.001013, y: 0.186692, z: 0.0008079999}
+      rotation: {x: -0.2918904, y: 0.02882377, z: 0.084308006, w: 0.95229274}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightFoot_vC_green
+      parentName: RightLeg_vC_green
+      position: {x: 0.00059099996, y: 0.12586099, z: 0.001665}
+      rotation: {x: 0.75200444, y: 0.050027885, z: -0.2138812, w: 0.62148327}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightToeBase_vC_green
+      parentName: RightFoot_vC_green
+      position: {x: 0.000032, y: 0.078903, z: -0.0031549998}
+      rotation: {x: 0.29746184, y: -0.0048769806, z: -0.058426805, w: 0.9529318}
+      scale: {x: 1, y: 1, z: 1}
+    - name: RightToe_End_vC_green
+      parentName: RightToeBase_vC_green
+      position: {x: -0.000119, y: 0.053749997, z: 0.000066}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    globalScale: 1
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
+  animationType: 3
+  humanoidOversampling: 1
+  avatarSetup: 1
+  addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  remapMaterialsIfMaterialImportModeIsNone: 0
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
