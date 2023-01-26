@@ -9,7 +9,9 @@ namespace EnterKratos
 
         public void Teleport(Collider other)
         {
-            other.transform.position = target.position;
+            var otherTransform = other.transform;
+            otherTransform.position = target.position;
+            otherTransform.rotation = target.rotation;
         }
     }
 }
