@@ -7,5 +7,6 @@ namespace EnterKratos.ScriptableObjects
     {
         public int attackDamage;
         public int attackCooldown;
+        public float attackVelocity;
     }
 }

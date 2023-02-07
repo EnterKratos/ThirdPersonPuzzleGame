@@ -44,11 +44,16 @@ namespace EnterKratos
             _health = killable.Value.MaxHealth;
         }
 
-        public void Attack(int amount)
+        /// <summary>
+        /// Attempts to damage the health system by the given amount
+        /// </summary>
+        /// <param name="amount">The amount of damage to inflict</param>
+        /// <returns>True if the health system died as a result of this attack</returns>
+        public bool Attack(int amount)
         {
             if (_coolingDown || _dead || invulnerable)
             {
-                return;
+                return false;
             }
 
             _health = ClampHealth(_health - amount);
@@ -63,7 +68,7 @@ namespace EnterKratos
 
             if (!Dead)
             {
-                return;
+                return false;
             }
 
             if (diedEvent)
@@ -72,6 +77,7 @@ namespace EnterKratos
             }
             diedUnityEvent.Invoke();
             _dead = true;
+            return true;
         }
 
         public void Heal(int amount)

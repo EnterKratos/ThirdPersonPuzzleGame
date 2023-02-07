@@ -14,5 +14,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   damageCooldown: 0
-  attackRadius: 1.5
-  attackGizmoColour: {r: 1, g: 0, b: 0, a: 0}

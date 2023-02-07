@@ -9,12 +9,18 @@ namespace EnterKratos
         private ScriptableObjects.Weapon weapon;
 
         private bool _attacking;
+        private GameObject _player;
 
         public int AttackCooldown => weapon.attackCooldown;
 
         public void SetAttacking(bool value)
         {
             _attacking = value;
+        }
+
+        private void Start()
+        {
+            _player = GameObject.FindGameObjectWithTag(GameObjectExtensions.PlayerTag);
         }
 
         private void OnTriggerEnter(Collider other)
@@ -24,9 +30,10 @@ namespace EnterKratos
                 return;
             }
 
-            foreach (var healthSystem in other.GetComponents<HealthSystem>())
+            var died = other.GetComponent<HealthSystem>()?.Attack(weapon.attackDamage);
+            if (died == true)
             {
-                healthSystem.Attack(weapon.attackDamage);
+                other.GetComponent<Hittable>()?.Hit(_player.transform.forward * weapon.attackVelocity);
             }
         }
     }
