@@ -1,11 +1,13 @@
 ﻿title: Start
 ---
-Voice: Hey! Wake up!
+[character name="Voice"]<style="Name">Voice:</style> [/character]Hey! Wake up!
+<<stand_up TutorialController>>
 Huh? Who's there?
-Voice: Oh you're awake! Finally.
+[character name="Voice"]<style="Name">Voice:</style> [/character]Finally, you're up.
 How did I get here?
-Voice: I thought you'd never ask. It all started when...
+[character name="Voice"]<style="Name">Voice:</style> [/character]It all started when...
 Skip to the end.
-Voice: Rude...
-Voice: You're locked in a dwarven dungeon and need to escape. There, happy?
+[character name="Voice"]<style="Name">Voice:</style> [/character]Rude...
+[character name="Voice"]<style="Name">Voice:</style> [/character]You're locked in a dwarven dungeon and need to escape. There, happy?
+<<unlock_movement TutorialController>>
 ===
