@@ -5413,6 +5413,63 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1001 &1161078637
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1041488392}
+    m_Modifications:
+    - target: {fileID: 1438335215199890, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_Name
+      value: TrainingDummy
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 27.93032
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.5004548
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -3.7123575
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.38268325
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.9238796
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 225
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
 --- !u!43 &1202116851
 Mesh:
   m_ObjectHideFlags: 0
