@@ -1,5 +1,6 @@
 ﻿title: Start
 ---
+<<wait 3>>
 [character name="Voice"]<style="Name">Voice:</style> [/character]Hey! Wake up!
 <<stand_up TutorialController>>
 Huh? Who's there?
