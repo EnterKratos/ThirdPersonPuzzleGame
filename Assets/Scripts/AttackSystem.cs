@@ -13,7 +13,7 @@ namespace EnterKratos
 
         public bool Attack()
         {
-            if (_coolingDown)
+            if (_coolingDown || weapon == null || !weapon.gameObject.activeSelf)
             {
                 return false;
             }
