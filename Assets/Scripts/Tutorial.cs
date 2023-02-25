@@ -16,12 +16,16 @@ namespace EnterKratos
         private ThirdPersonController controller;
 
         [SerializeField]
+        private GameObject[] targets;
+
+        [SerializeField]
         private Rigidbody swordCollectable;
         
         [SerializeField]
         private Vector3 swordThrowForce;
 
         private int _standUpHash;
+        private int _currentTarget;
 
         private void Awake()
         {
@@ -43,6 +47,20 @@ namespace EnterKratos
         public void WalkedToTrainingDummy()
         {
             dialogueRunner.StartDialogue("Walked_To_Training_Dummy");
+        }
+
+        [YarnCommand("set_target")]
+        public void SetTarget(int targetIndex)
+        {
+            _currentTarget = targetIndex;
+            targets[targetIndex].SetActive(true);
+        }
+
+        public void WalkedToTarget()
+        {
+            targets[_currentTarget].SetActive(false);
+            dialogueRunner.Stop();
+            dialogueRunner.StartDialogue("Walked_To_Target");
         }
 
         [YarnCommand("throw_sword")]
