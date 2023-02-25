@@ -1,6 +1,6 @@
 ﻿title: Start
 ---
-<<wait 3>>
+<<wait 2>>
 [character name="Voice"]<style="Name">Voice:</style> [/character]Hey! Wake up!
 <<stand_up TutorialController>>
 Huh? Who's there?
@@ -10,5 +10,17 @@ How did I get here?
 Skip to the end.
 [character name="Voice"]<style="Name">Voice:</style> [/character]Rude...
 [character name="Voice"]<style="Name">Voice:</style> [/character]You're locked in a dwarven dungeon and need to escape. There, happy?
+I feel disoriented.
+[character name="Voice"]<style="Name">Voice:</style> [/character]Maybe you should stop standing on the bed? Who does that!?
+[character name="Voice"]<style="Name">Voice:</style> [/character]It could also be that knock to the head you took.
+[character name="Voice"]<style="Name">Voice:</style> [/character]Try walking over to the training dummy. The guards thought you might want some company.
 <<unlock_movement TutorialController>>
+<<stop>>
+//<<throw_sword TutorialController>>
+===
+
+
+title: Walked_To_Training_Dummy
+---
+<<throw_sword TutorialController>>
 ===
