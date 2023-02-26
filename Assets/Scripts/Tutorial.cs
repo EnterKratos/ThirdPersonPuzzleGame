@@ -1,3 +1,5 @@
+using System.Collections;
+using EnterKratos.ScriptableObjects;
 using StarterAssets;
 using UnityEngine;
 using Yarn.Unity;
@@ -13,16 +15,22 @@ namespace EnterKratos
         private Animator animator;
 
         [SerializeField]
-        private ThirdPersonController controller;
+        private ThirdPersonController characterController;
 
         [SerializeField]
         private GameObject[] targets;
 
         [SerializeField]
         private Rigidbody swordCollectable;
-        
+
         [SerializeField]
-        private Vector3 swordThrowForce;
+        private Rigidbody keyCollectable;
+
+        [SerializeField]
+        private Vector3 throwForce;
+
+        [SerializeField]
+        private float throwDelay;
 
         private int _standUpHash;
         private int _currentTarget;
@@ -41,7 +49,7 @@ namespace EnterKratos
         [YarnCommand("unlock_movement")]
         public void UnlockMovement()
         {
-            controller.enabled = true;
+            characterController.enabled = true;
         }
 
         public void WalkedToTrainingDummy()
@@ -66,7 +74,26 @@ namespace EnterKratos
         [YarnCommand("throw_sword")]
         public void ThrowSword()
         {
-            swordCollectable.AddForce(swordThrowForce, ForceMode.Impulse);
+            swordCollectable.gameObject.SetActive(true);
+            StartCoroutine(Throw(swordCollectable, throwForce, throwDelay));
+        }
+
+        [YarnCommand("throw_key")]
+        public void ThrowKey()
+        {
+            keyCollectable.gameObject.SetActive(true);
+            StartCoroutine(Throw(keyCollectable, throwForce, throwDelay));
+        }
+
+        public void CollectableCollected(Collectable collectable)
+        {
+            Debug.Log(collectable.description);
+        }
+
+        private static IEnumerator Throw(Rigidbody rigidbody, Vector3 force, float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            rigidbody.AddForce(force, ForceMode.Impulse);
         }
     }
 }

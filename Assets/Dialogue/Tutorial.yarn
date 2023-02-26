@@ -40,5 +40,8 @@ title: Walked_To_Target
     [character name="Voice"]<style="Name">Voice:</style> [/character]And to the middle of the room.
 <<else>>
     [character name="Voice"]<style="Name">Voice:</style> [/character]No lasting damage then.
+    [character name="Voice"]<style="Name">Voice:</style> [/character]Now that you have your bearings, here's the key to your cell.
+    <<throw_key TutorialController>>
+    [character name="Voice"]<style="Name">Voice:</style> [/character]Don't ask.
 <<endif>>
 ===
