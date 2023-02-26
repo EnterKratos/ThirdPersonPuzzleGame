@@ -4,22 +4,12 @@ using UnityEngine;
 namespace EnterKratos.Editor
 {
     [CustomEditor(typeof(HealthSystem))]
-    public class HealthSystemEditor : UnityEditor.Editor
+    public class HealthSystemEditor : DebugEditorBase
     {
-        private bool _displayDebugFields;
         private int _attackValue;
 
-        public override void OnInspectorGUI()
+        public override void Draw()
         {
-            base.OnInspectorGUI();
-
-            EditorGUILayout.Space();
-            _displayDebugFields = EditorGUILayout.Foldout(_displayDebugFields, "Debug", true);
-            if (!_displayDebugFields)
-            {
-                return;
-            }
-
             _attackValue = EditorGUILayout.IntField("Attack Value", _attackValue);
 
             if (GUILayout.Button("Attack"))
