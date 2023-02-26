@@ -47,8 +47,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.1251154, y: 0.63672924, z: 0.29420376}
-  m_Center: {x: -0.0007176399, y: -0.00006771088, z: 0.0072426796}
+  m_Size: {x: 1.0526743, y: 0.57041216, z: 0.29420376}
+  m_Center: {x: 0.011229038, y: 0.01039052, z: 0.0072426796}
 --- !u!135 &1095764778378200903
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -60,7 +60,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.58
+  m_Radius: 0.7
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &1623803696946019795
 Rigidbody:
@@ -99,10 +99,22 @@ MonoBehaviour:
         m_MethodName: Raise
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 5d46c2a0a3d40e54bbf3d302871dcf32,
+          m_ObjectArgument: {fileID: 11400000, guid: 38e111ba72dad6d418519c4314e24fa8,
             type: 2}
           m_ObjectArgumentAssemblyTypeName: EnterKratos.ScriptableObjects.Collectable,
             Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1623803696946019797}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
