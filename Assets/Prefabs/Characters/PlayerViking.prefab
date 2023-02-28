@@ -20,6 +20,9 @@ GameObject:
   - component: {fileID: 7239038942944071935}
   - component: {fileID: 8062473816577392458}
   - component: {fileID: 3499161763640399494}
+  - component: {fileID: 6836021349250632026}
+  - component: {fileID: 5118636803411568509}
+  - component: {fileID: 2621302511435403016}
   m_Layer: 8
   m_Name: PlayerViking
   m_TagString: Player
@@ -5154,6 +5157,74 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &6836021349250632026
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37832422919389821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 110c6cd881a740f78c8080f9bbe51260, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6714185465292374717}
+        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: StandUp
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &5118636803411568509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37832422919389821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2041b95190f4c26b3eba3c1ca019009, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  items: []
+--- !u!114 &2621302511435403016
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37832422919389821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4982f1f7f44cd785896416010fe29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typedEvent: {fileID: 11400000, guid: 418f2daedda32c14aa08c2224f412066, type: 2}
+  typedResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 5118636803411568509}
+        m_TargetAssemblyTypeName: EnterKratos.Inventory, Assembly-CSharp
+        m_MethodName: EventAdd
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1374037258433587382
 GameObject:
   m_ObjectHideFlags: 0

@@ -123,12 +123,6 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
---- !u!1 &17885635 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 37832422919389821, guid: 3dff68763936bc74ab31146b2f2fc58d,
-    type: 3}
-  m_PrefabInstance: {fileID: 630429445}
-  m_PrefabAsset: {fileID: 0}
 --- !u!43 &44291756
 Mesh:
   m_ObjectHideFlags: 0
@@ -2919,7 +2913,13 @@ PrefabInstance:
       propertyPath: target
       value: 
       objectReference: {fileID: 321847181}
-    m_RemovedComponents: []
+    - target: {fileID: 6836021349250632026, guid: 3dff68763936bc74ab31146b2f2fc58d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6836021349250632026, guid: 3dff68763936bc74ab31146b2f2fc58d, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 3dff68763936bc74ab31146b2f2fc58d, type: 3}
 --- !u!43 &660465606
 Mesh:
@@ -6697,7 +6697,7 @@ MonoBehaviour:
     type: 3}
   m_PrefabInstance: {fileID: 630429445}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17885635}
+  m_GameObject: {fileID: 0}
   m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 26e54e5a728a9234ab24fcf1460ed8a2, type: 3}
@@ -6709,47 +6709,6 @@ Animator:
     type: 3}
   m_PrefabInstance: {fileID: 630429445}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1392083327
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17885635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b4982f1f7f44cd785896416010fe29f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  typedEvent: {fileID: 11400000, guid: 418f2daedda32c14aa08c2224f412066, type: 2}
-  typedResponse:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1392083328}
-        m_TargetAssemblyTypeName: EnterKratos.Inventory, Assembly-CSharp
-        m_MethodName: EventAdd
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &1392083328
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 17885635}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e2041b95190f4c26b3eba3c1ca019009, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  items: []
 --- !u!43 &1398816052
 Mesh:
   m_ObjectHideFlags: 0
