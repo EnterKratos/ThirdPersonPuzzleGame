@@ -9448,7 +9448,7 @@ PrefabInstance:
     - target: {fileID: 2800897288533786445, guid: fb020ff26827ab349bac815863c735c8,
         type: 3}
       propertyPath: m_Name
-      value: SceneLoader
+      value: SceneLoaderVolume
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb020ff26827ab349bac815863c735c8, type: 3}
