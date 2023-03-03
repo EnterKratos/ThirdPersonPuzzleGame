@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: Cell Key
   description: The key, conveniently, to your cell
-  model: {fileID: 7454325998047808990, guid: cf38f2c5e493b2242b1d668b4723583e, type: 3}
+  model: {fileID: 1244134077475299452, guid: 696a60b285731f446a5cd83b09f02803, type: 3}
