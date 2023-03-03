@@ -1,4 +1,5 @@
 ﻿using UnityEditor;
+using UnityEngine;
 
 namespace EnterKratos.Editor
 {
@@ -9,6 +10,11 @@ namespace EnterKratos.Editor
         public override void OnInspectorGUI()
         {
             base.OnInspectorGUI();
+
+            if (!Application.isPlaying)
+            {
+                return;
+            }
 
             EditorGUILayout.Space();
             _displayDebugFields = EditorGUILayout.Foldout(_displayDebugFields, "Debug", true);
