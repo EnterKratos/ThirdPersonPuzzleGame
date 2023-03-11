@@ -8,13 +8,13 @@ namespace EnterKratos.Editor
     {
         private int _attackValue;
 
-        public override void Draw()
+        protected override void Draw()
         {
             _attackValue = EditorGUILayout.IntField("Attack Value", _attackValue);
 
             if (GUILayout.Button("Attack"))
             {
-                ((HealthSystem)target)?.Attack(_attackValue);
+                ((HealthSystem)target).Attack(_attackValue);
             }
         }
     }

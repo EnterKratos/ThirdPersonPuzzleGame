@@ -9,6 +9,11 @@ namespace EnterKratos.Editor
 
         public override void OnInspectorGUI()
         {
+            if (!PreDraw())
+            {
+                return;
+            }
+
             base.OnInspectorGUI();
 
             if (!Application.isPlaying)
@@ -26,7 +31,16 @@ namespace EnterKratos.Editor
             Draw();
         }
 
-        public virtual void Draw()
+        /// <summary>
+        /// Draws before the default inspector fields and provides a way to prevent them being drawn.
+        /// </summary>
+        /// <returns>True to continue drawing default inspector fields, else false</returns>
+        protected virtual bool PreDraw()
+        {
+            return true;
+        }
+
+        protected virtual void Draw()
         {
 
         }

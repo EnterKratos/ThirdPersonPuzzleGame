@@ -6,11 +6,11 @@ namespace EnterKratos.Editor
     [CustomEditor(typeof(Lock))]
     public class LockEditor : DebugEditorBase
     {
-        public override void Draw()
+        protected override void Draw()
         {
             if (GUILayout.Button("Unlock"))
             {
-                ((Lock)target)?.Unlock();
+                ((Lock)target).Unlock();
             }
         }
     }

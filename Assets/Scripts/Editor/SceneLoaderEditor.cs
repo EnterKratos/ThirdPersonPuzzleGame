@@ -6,11 +6,11 @@ namespace EnterKratos.Editor
     [CustomEditor(typeof(SceneLoader))]
     public class SceneLoaderEditor : DebugEditorBase
     {
-        public override void Draw()
+        protected override void Draw()
         {
             if (GUILayout.Button("Load Scene"))
             {
-                ((SceneLoader)target)?.LoadSceneAdditive();
+                ((SceneLoader)target).LoadSceneAdditive();
             }
         }
     }
