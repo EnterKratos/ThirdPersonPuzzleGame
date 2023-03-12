@@ -1,4 +1,5 @@
-﻿using Cinemachine;
+﻿using System;
+using Cinemachine;
 using UnityEngine;
 
 namespace EnterKratos
@@ -18,6 +19,18 @@ namespace EnterKratos
         public void Reset()
         {
             virtualCamera.Priority = _oldPriority;
+        }
+
+        public void SetVirtualCamera(GameObject newVirtualCamera)
+        {
+            if (newVirtualCamera.TryGetComponent<CinemachineVirtualCamera>(out var cam))
+            {
+                virtualCamera = cam;
+            }
+            else
+            {
+                throw new InvalidOperationException($"{newVirtualCamera.name} does not contain a {nameof(CinemachineVirtualCamera)}");
+            }
         }
     }
 }
