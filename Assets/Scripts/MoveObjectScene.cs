@@ -19,7 +19,6 @@ namespace EnterKratos
             {
                 MoveObjectToScene(other.gameObject);
             }
-
         }
 
         private void MoveObjectToScene(GameObject obj)
@@ -33,8 +32,7 @@ namespace EnterKratos
 
             if (obj.IsPlayer())
             {
-                // TODO: Fix setting active scene lighting issue
-                // SceneManager.SetActiveScene(gameObject.scene);
+                SceneManager.SetActiveScene(gameObject.scene);
             }
         }
     }
