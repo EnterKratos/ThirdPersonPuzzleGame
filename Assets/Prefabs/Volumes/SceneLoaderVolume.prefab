@@ -65,7 +65,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3647622500655970243}
         m_TargetAssemblyTypeName: EnterKratos.SceneLoader.SceneLoader, Assembly-CSharp
-        m_MethodName: LoadSceneAdditive
+        m_MethodName: LoadScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -105,6 +105,7 @@ MonoBehaviour:
   scene: {fileID: 102900000, guid: 148b033037f5a0d4d8f8f7a57ec2ee67, type: 3}
   loadOnStart: 0
   loadAsync: 1
+  mode: 1
   onSceneLoaded:
     m_PersistentCalls:
       m_Calls: []

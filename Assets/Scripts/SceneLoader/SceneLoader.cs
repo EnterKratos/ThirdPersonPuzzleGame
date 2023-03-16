@@ -22,6 +22,9 @@ namespace EnterKratos.SceneLoader
         private bool loadAsync;
 
         [SerializeField]
+        private LoadSceneMode mode;
+
+        [SerializeField]
         private UnityEvent onSceneLoaded;
 
         [HideInInspector]
@@ -30,15 +33,15 @@ namespace EnterKratos.SceneLoader
         [HideInInspector]
         public string scenePath;
 
-        public void LoadSceneAdditive()
+        public void LoadScene()
         {
             if (loadAsync)
             {
-                SceneManager.LoadSceneAsync(scenePath, LoadSceneMode.Additive);
+                SceneManager.LoadSceneAsync(scenePath, mode);
             }
             else
             {
-                SceneManager.LoadScene(scenePath, LoadSceneMode.Additive);
+                SceneManager.LoadScene(scenePath, mode);
             }
 
             onSceneLoaded.Invoke();
@@ -73,7 +76,7 @@ namespace EnterKratos.SceneLoader
         {
             if (loadOnStart && Application.isPlaying)
             {
-                LoadSceneAdditive();
+                LoadScene();
             }
         }
     }
