@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2800897288533786444}
   - component: {fileID: 2800897288533786435}
   - component: {fileID: 2800897288533786434}
-  - component: {fileID: 2800897288533786433}
+  - component: {fileID: 3647622500655970243}
   m_Layer: 0
   m_Name: SceneLoaderVolume
   m_TagString: Untagged
@@ -63,8 +63,8 @@ MonoBehaviour:
   onEnter:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2800897288533786433}
-        m_TargetAssemblyTypeName: EnterKratos.SceneLoader, Assembly-CSharp
+      - m_Target: {fileID: 3647622500655970243}
+        m_TargetAssemblyTypeName: EnterKratos.SceneLoader.SceneLoader, Assembly-CSharp
         m_MethodName: LoadSceneAdditive
         m_Mode: 1
         m_Arguments:
@@ -75,25 +75,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  onExit:
-    m_PersistentCalls:
-      m_Calls: []
---- !u!114 &2800897288533786433
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2800897288533786445}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02ba953422e24a64c85bb3b4a8cfc267, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  scene: {fileID: 0}
-  onSceneLoaded:
-    m_PersistentCalls:
-      m_Calls:
       - m_Target: {fileID: 2800897288533786445}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
@@ -106,3 +87,26 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  onExit:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3647622500655970243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2800897288533786445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f353a3483fdc4dc0ba66ddaaddb7a1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 102900000, guid: 148b033037f5a0d4d8f8f7a57ec2ee67, type: 3}
+  loadOnStart: 0
+  loadAsync: 1
+  onSceneLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  sceneGuid: 148b033037f5a0d4d8f8f7a57ec2ee67
+  scenePath: Assets/Scenes/Tutorial 1.unity
