@@ -33,6 +33,7 @@ namespace EnterKratos
 
         private void MoveGameObjectToScene(GameObject obj)
         {
+            obj.transform.parent = null;
             SceneManager.MoveGameObjectToScene(obj, gameObject.scene);
 
             if (obj.TryGetComponent<SceneArrivalHandler>(out var handler))
