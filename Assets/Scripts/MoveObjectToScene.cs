@@ -4,24 +4,34 @@ using UnityEngine.SceneManagement;
 
 namespace EnterKratos
 {
-    public class MoveObjectScene : MonoBehaviour
+    public class MoveObjectToScene : MonoBehaviour
     {
         public void Move(Collider other)
+        {
+            MoveInternal(other.gameObject);
+        }
+
+        public void Move(GameObject other)
+        {
+            MoveInternal(other);
+        }
+
+        private void MoveInternal(GameObject other)
         {
             if (other.TryGetComponent<ObjectsToMove>(out var objectsToMove))
             {
                 foreach (var obj in objectsToMove.objects)
                 {
-                    MoveObjectToScene(obj);
+                    MoveGameObjectToScene(obj);
                 }
             }
             else
             {
-                MoveObjectToScene(other.gameObject);
+                MoveGameObjectToScene(other.gameObject);
             }
         }
 
-        private void MoveObjectToScene(GameObject obj)
+        private void MoveGameObjectToScene(GameObject obj)
         {
             SceneManager.MoveGameObjectToScene(obj, gameObject.scene);
 
