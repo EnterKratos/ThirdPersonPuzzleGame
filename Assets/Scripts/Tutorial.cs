@@ -90,6 +90,18 @@ namespace EnterKratos
             Debug.Log(collectable.description);
         }
 
+        public void WalkedToCorridor()
+        {
+            dialogueRunner.Stop();
+            dialogueRunner.StartDialogue("Walked_To_Corridor");
+        }
+
+        [YarnCommand("display_run_instruction")]
+        public void DisplayRunInstruction()
+        {
+            Debug.Log("TODO: Display run controls");
+        }
+
         private static IEnumerator Throw(Rigidbody rigidbody, Vector3 force, float delay)
         {
             yield return new WaitForSeconds(delay);

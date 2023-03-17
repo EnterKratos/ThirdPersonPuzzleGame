@@ -37,11 +37,20 @@ title: Walked_To_Target
     [character name="Voice"]<style="Name">Voice:</style> [/character]And over there.
 <<elseif $reachedIndex == 3>>
     <<set_target TutorialController 3>>
-    [character name="Voice"]<style="Name">Voice:</style> [/character]And to the middle of the room.
+    [character name="Voice"]<style="Name">Voice:</style> [/character]Now over to the door.
 <<else>>
     [character name="Voice"]<style="Name">Voice:</style> [/character]No lasting damage then.
     [character name="Voice"]<style="Name">Voice:</style> [/character]Now that you have your bearings, here's the key to your cell.
     <<throw_key TutorialController>>
     [character name="Voice"]<style="Name">Voice:</style> [/character]Don't ask.
 <<endif>>
+===
+
+
+title: Walked_To_Corridor
+---
+[character name="Voice2"]<style="Name">Voice:</style> [/character]Follow the corridor past the other cells.
+Wait, how did you get over here so fast?
+[character name="Voice2"]<style="Name">Voice:</style> [/character]Shh.. <i>Someone's coming</i>. RUN!
+<<display_run_instruction TutorialController>>
 ===
