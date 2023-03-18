@@ -13,6 +13,7 @@ namespace EnterKratos
 
         public void UpdatePriority(int priority)
         {
+            _oldPriority = virtualCamera.Priority;
             virtualCamera.Priority = priority;
         }
 
