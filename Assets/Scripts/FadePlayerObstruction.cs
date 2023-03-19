@@ -21,6 +21,10 @@ namespace EnterKratos
         private void Awake()
         {
             _raycastHits = new RaycastHit[rayCastBufferSize];
+            if (camera == null)
+            {
+                camera = Camera.main;
+            }
         }
 
         private void Update()
