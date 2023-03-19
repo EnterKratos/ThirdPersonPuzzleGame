@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 6836021349250632026}
   - component: {fileID: 5118636803411568509}
   - component: {fileID: 2621302511435403016}
+  - component: {fileID: 8704679753037703533}
   m_Layer: 8
   m_Name: PlayerViking
   m_TagString: Player
@@ -5225,6 +5226,24 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8704679753037703533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37832422919389821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e596f311623b4bd98e0dbfc6fb25377e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  camera: {fileID: 0}
+  player: {fileID: 5652144348543826726}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 4096
+  rayCastBufferSize: 10
 --- !u!1 &1374037258433587382
 GameObject:
   m_ObjectHideFlags: 0
