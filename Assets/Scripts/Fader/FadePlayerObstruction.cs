@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-namespace EnterKratos
+namespace EnterKratos.Fader
 {
     public class FadePlayerObstruction : MonoBehaviour
     {
@@ -37,7 +37,7 @@ namespace EnterKratos
 
             for (var i = 0; i < hits; i++)
             {
-                _raycastHits[i].transform.GetComponent<Fader.Fader>().FadeOut();
+                _raycastHits[i].transform.GetComponent<EnterKratos.Fader.Fader>().FadeOut();
             }
         }
     }
