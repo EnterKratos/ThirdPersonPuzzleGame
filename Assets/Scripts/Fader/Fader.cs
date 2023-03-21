@@ -67,7 +67,7 @@ namespace EnterKratos.Fader
         {
             _lastFadeOutRequest = Time.time;
 
-            if (_fadeCoroutine != null || _lastDirection == direction)
+            if (!enabled || _fadeCoroutine != null || _lastDirection == direction)
             {
                 return;
             }
