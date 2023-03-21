@@ -22,6 +22,16 @@ namespace EnterKratos
             _composer.m_DeadZoneHeight = deadZoneHeight;
         }
 
+        public void SetFollowTarget(Collider target)
+        {
+            camera.Follow = target.transform;
+        }
+
+        public void SetLookAtTarget(Collider target)
+        {
+            camera.LookAt = target.transform;
+        }
+
         private void Awake()
         {
             _composer = camera.GetCinemachineComponent<CinemachineComposer>();
