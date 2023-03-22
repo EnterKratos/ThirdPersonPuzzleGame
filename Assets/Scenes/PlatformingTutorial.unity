@@ -44848,7 +44848,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minAlpha: 0.2
   maxAlpha: 1
-  fadeOutDuration: 0.5
+  fadeOutDuration: 1
   cooldown: 0.1
 --- !u!1 &7600513106696714798
 GameObject:
