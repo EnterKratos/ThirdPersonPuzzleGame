@@ -1,4 +1,4 @@
-﻿using EnterKratos;
+﻿using EnterKratos.Health;
 using UnityEngine;
 using Random = UnityEngine.Random;
 #if ENABLE_INPUT_SYSTEM && STARTER_ASSETS_PACKAGES_CHECKED

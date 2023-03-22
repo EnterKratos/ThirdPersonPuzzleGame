@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using EnterKratos.Health;
+using UnityEngine;
 
 namespace EnterKratos.ScriptableObjects
 {
