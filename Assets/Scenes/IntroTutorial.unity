@@ -30675,6 +30675,11 @@ PrefabInstance:
       propertyPath: m_LookAt
       value: 
       objectReference: {fileID: 1992502909}
+    - target: {fileID: 6691359129767159874, guid: c54d093bff02e64499a48acf7a5d5248,
+        type: 3}
+      propertyPath: m_StandbyUpdate
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6691359129767159875, guid: c54d093bff02e64499a48acf7a5d5248,
         type: 3}
       propertyPath: m_LocalRotation.w
