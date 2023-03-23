@@ -24,6 +24,8 @@ GameObject:
   - component: {fileID: 5118636803411568509}
   - component: {fileID: 2621302511435403016}
   - component: {fileID: 8704679753037703533}
+  - component: {fileID: 8391012193673379892}
+  - component: {fileID: 9076714941465328109}
   m_Layer: 8
   m_Name: PlayerViking
   m_TagString: Player
@@ -168,6 +170,7 @@ MonoBehaviour:
   sprint: 0
   attack: 0
   interactEvent: {fileID: 11400000, guid: 1ae8c4fc47b92be4b8653ec9a2f7c679, type: 2}
+  backEvent: {fileID: 11400000, guid: 6a530a02d4b9d3842873c8c58a04fc3b, type: 2}
   analogMovement: 0
   cursorLocked: 0
   cursorInputForLook: 1
@@ -5244,6 +5247,55 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4096
   rayCastBufferSize: 10
+--- !u!114 &8391012193673379892
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37832422919389821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0fef318d4cfc48d2a48ab44ef7e31850, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  event: {fileID: 11400000, guid: 6a530a02d4b9d3842873c8c58a04fc3b, type: 2}
+  response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 9076714941465328109}
+        m_TargetAssemblyTypeName: EnterKratos.SceneLoader.SceneLoader, Assembly-CSharp
+        m_MethodName: LoadScene
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &9076714941465328109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37832422919389821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f353a3483fdc4dc0ba66ddaaddb7a1d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scene: {fileID: 102900000, guid: 457653c37da486742ba66a2d2a803456, type: 3}
+  loadOnStart: 0
+  loadAsync: 1
+  mode: 0
+  onSceneLoaded:
+    m_PersistentCalls:
+      m_Calls: []
+  sceneGuid: 457653c37da486742ba66a2d2a803456
+  scenePath: Assets/Scenes/MainMenu.unity
 --- !u!1 &1374037258433587382
 GameObject:
   m_ObjectHideFlags: 0

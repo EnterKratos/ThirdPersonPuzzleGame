@@ -15,6 +15,7 @@ namespace StarterAssets
 		public bool sprint;
 		public bool attack;
 		public GameEvent interactEvent;
+		public GameEvent backEvent;
 
 		[Header("Movement Settings")]
 		public bool analogMovement;
@@ -57,6 +58,14 @@ namespace StarterAssets
 			if (value.isPressed)
 			{
 				interactEvent.Raise();
+			}
+		}
+
+		public void OnBack(InputValue value)
+		{
+			if (value.isPressed)
+			{
+				backEvent.Raise();
 			}
 		}
 #endif
