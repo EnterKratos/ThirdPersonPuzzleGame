@@ -18,6 +18,9 @@ namespace EnterKratos
 
 #if UNITY_EDITOR
             EditorSceneManager.sceneOpened += OnSceneOpened;
+            EditorSceneManager.sceneClosed += OnSceneClosed;
+            SceneManager.sceneLoaded += OnSceneLoaded;
+            SceneManager.sceneUnloaded += OnSceneUnloaded;
 #endif
         }
 
@@ -27,16 +30,34 @@ namespace EnterKratos
 
 #if UNITY_EDITOR
             EditorSceneManager.sceneOpened -= OnSceneOpened;
+            EditorSceneManager.sceneClosed -= OnSceneClosed;
+            SceneManager.sceneLoaded -= OnSceneLoaded;
+            SceneManager.sceneUnloaded -= OnSceneUnloaded;
 #endif
         }
 
         private void SetLightEnabledState()
         {
-            light.enabled = SceneManager.sceneCount == 1;
+            light.enabled = SceneManager.sceneCount == 1 || SceneManager.GetActiveScene() == light.gameObject.scene;
         }
 
 #if UNITY_EDITOR
         private void OnSceneOpened(Scene scene, OpenSceneMode mode)
+        {
+            SetLightEnabledState();
+        }
+
+        private void OnSceneClosed(Scene scene)
+        {
+            SetLightEnabledState();
+        }
+
+        private void OnSceneLoaded(Scene arg0, LoadSceneMode arg1)
+        {
+            SetLightEnabledState();
+        }
+
+        private void OnSceneUnloaded(Scene arg0)
         {
             SetLightEnabledState();
         }
