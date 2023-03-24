@@ -734,6 +734,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893011202}
     m_Modifications:
+    - target: {fileID: 964927768856854994, guid: 19fd7ba965c4b064e9715e8ace9c4782,
+        type: 3}
+      propertyPath: scene
+      value: 
+      objectReference: {fileID: 102900000, guid: b62699d7f3f853a4b8fae7ca723d5ec3,
+        type: 3}
+    - target: {fileID: 964927768856854994, guid: 19fd7ba965c4b064e9715e8ace9c4782,
+        type: 3}
+      propertyPath: sceneGuid
+      value: b62699d7f3f853a4b8fae7ca723d5ec3
+      objectReference: {fileID: 0}
+    - target: {fileID: 964927768856854994, guid: 19fd7ba965c4b064e9715e8ace9c4782,
+        type: 3}
+      propertyPath: scenePath
+      value: Assets/Scenes/CombatTutorial.unity
+      objectReference: {fileID: 0}
     - target: {fileID: 4875662000255843718, guid: 19fd7ba965c4b064e9715e8ace9c4782,
         type: 3}
       propertyPath: m_text
