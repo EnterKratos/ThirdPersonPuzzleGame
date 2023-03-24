@@ -18,6 +18,8 @@ namespace EnterKratos.Fader
 
         private RaycastHit[] _raycastHits;
 
+        private Camera MainCamera => camera != null ? camera : Camera.main;
+
         private void Awake()
         {
             _raycastHits = new RaycastHit[rayCastBufferSize];
@@ -29,7 +31,7 @@ namespace EnterKratos.Fader
 
         private void Update()
         {
-            var rayStart = camera.transform.position;
+            var rayStart = MainCamera.transform.position;
             var rayDirection = player.transform.position - rayStart;
 
             var hits = Physics.RaycastNonAlloc(rayStart, rayDirection, _raycastHits, rayDirection.magnitude, layerMask);
@@ -37,7 +39,7 @@ namespace EnterKratos.Fader
 
             for (var i = 0; i < hits; i++)
             {
-                _raycastHits[i].transform.GetComponent<EnterKratos.Fader.Fader>().FadeOut();
+                _raycastHits[i].transform.GetComponent<Fader>().FadeOut();
             }
         }
     }

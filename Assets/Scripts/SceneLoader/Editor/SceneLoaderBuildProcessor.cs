@@ -18,6 +18,12 @@ namespace EnterKratos.SceneLoader.Editor
                 {
                     sceneLoader.scenePath = AssetDatabase.GUIDToAssetPath(sceneLoader.sceneGuid);
                 }
+
+                var sceneUnloaders = gameObject.GetComponentsInChildren<SceneUnloader>(true);
+                foreach (var sceneUnloader in sceneUnloaders)
+                {
+                    sceneUnloader.scenePath = AssetDatabase.GUIDToAssetPath(sceneUnloader.sceneGuid);
+                }
             }
         }
     }
