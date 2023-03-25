@@ -54,3 +54,45 @@ Wait, how did you get over here so fast?
 [character name="Voice2"]<style="Name">Voice:</style> [/character]Shh.. <i>Someone's coming</i>. RUN!
 <<display_run_instruction TutorialController>>
 ===
+
+
+title: Platforming_Tutorial_Start
+---
+[character name="Voice3"]<style="Name">Voice:</style> [/character]Quick! Jump over to that platform!
+===
+
+
+title: Failed_Jump
+---
+[character name="Voice3"]<style="Name">Voice:</style> [/character]I guess that's too far. Try that conveniently placed lever.
+===
+
+
+title: Enabled_Moving_Platform
+---
+[character name="Voice3"]<style="Name">Voice:</style> [/character]Great! Now you can reach the other side.
+===
+
+
+title: Reached_Far_Side
+---
+[character name="Voice4"]<style="Name">Voice:</style> [/character]Use the pillars to reach the top.
+Okay this just seems <i>wildly</i> inefficient. Who built this place?
+[character name="Voice4"]<style="Name">Voice:</style> [/character]They say he's an extremely wise and clever man.
+Hmmn...
+[character name="Voice4"]<style="Name">Voice:</style> [/character]Don't question the maker!
+===
+
+
+title: Reached_Second_Pillar
+---
+This is really dangerous! I could die falling from here!
+[character name="Voice4"]<style="Name">Voice:</style> [/character]Then don't fall.
+===
+
+
+title: Reached_Lift_Corridor
+---
+[character name="Voice5"]<style="Name">Voice:</style> [/character]Wow you made it! ...I mean, I knew you could do it!
+[character name="Voice5"]<style="Name">Voice:</style> [/character]Head down the corridor to the lift.
+===

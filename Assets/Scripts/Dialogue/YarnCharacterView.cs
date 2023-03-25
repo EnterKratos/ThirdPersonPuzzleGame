@@ -154,5 +154,13 @@ namespace Yarn.Unity.Example
                 optionsBubbleRect.anchoredPosition = WorldToAnchoredPosition(optionsBubbleRect, playerCharacter.positionWithOffset, bubbleMargin);
             }
         }
+
+        public void AddCharacter(YarnCharacter character)
+        {
+            if (!allCharacters.Contains(character))
+            {
+                allCharacters.Add(character);
+            }
+        }
     }
 }
