@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace EnterKratos.ScriptableObjects
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Events/Game Event")]
     public class GameEvent : ScriptableObject
     {
         private readonly List<GameEventListener> _listeners = new();

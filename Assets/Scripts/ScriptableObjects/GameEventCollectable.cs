@@ -2,7 +2,7 @@
 
 namespace EnterKratos.ScriptableObjects
 {
-    [CreateAssetMenu]
+    [CreateAssetMenu(menuName = "Events/Game Event Collectable")]
     public class GameEventCollectable : GameEvent<Collectable>
     {
     }
