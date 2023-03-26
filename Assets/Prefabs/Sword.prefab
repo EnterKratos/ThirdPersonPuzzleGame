@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 11400000, guid: 9a40f11b60b14724b80a841d2017a846, type: 2}
+  collectable: {fileID: 11400000, guid: 5d46c2a0a3d40e54bbf3d302871dcf32, type: 2}
 --- !u!114 &169657817432992960
 MonoBehaviour:
   m_ObjectHideFlags: 0

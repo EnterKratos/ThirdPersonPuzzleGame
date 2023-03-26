@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 8704679753037703533}
   - component: {fileID: 8391012193673379892}
   - component: {fileID: 9076714941465328109}
+  - component: {fileID: 8625394446852514917}
   m_Layer: 8
   m_Name: PlayerViking
   m_TagString: Player
@@ -5296,6 +5297,22 @@ MonoBehaviour:
       m_Calls: []
   sceneGuid: 457653c37da486742ba66a2d2a803456
   scenePath: Assets/Scenes/MainMenu.unity
+--- !u!114 &8625394446852514917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37832422919389821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 95dfd0a3c584439e979ed0ebea859ba4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 37832422919389821}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1374037258433587382
 GameObject:
   m_ObjectHideFlags: 0
@@ -5305,6 +5322,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1789881773671757852}
+  - component: {fileID: 5344501858785300828}
   m_Layer: 0
   m_Name: WeaponPosition
   m_TagString: Untagged
@@ -5328,6 +5346,34 @@ Transform:
   m_Father: {fileID: 6792070749630506763}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5344501858785300828
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1374037258433587382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b4982f1f7f44cd785896416010fe29f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typedEvent: {fileID: 11400000, guid: 418f2daedda32c14aa08c2224f412066, type: 2}
+  typedResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6412659624636939561}
+        m_TargetAssemblyTypeName: EnterKratos.Health.Weapon, Assembly-CSharp
+        m_MethodName: CollectableCollected
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &4010127171339607036
 GameObject:
   m_ObjectHideFlags: 0

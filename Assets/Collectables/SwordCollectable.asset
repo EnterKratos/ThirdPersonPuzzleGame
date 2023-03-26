@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: SwordCollectable
   m_EditorClassIdentifier: 
   name: Dwarven Short Sword
-  description: A meager, one-handed sword of limited damage
+  description: A meager, single-handed sword of limited damage
   model: {fileID: 7741374483943696953, guid: 5dfcb0940a7fe5f46a494d1650d981dc, type: 3}

@@ -8,9 +8,10 @@ namespace EnterKratos.Tutorials
     public class TutorialBase : MonoBehaviour
     {
         [SerializeField]
-        private List<YarnCharacter> characters;
+        private DialogueRunner dialogueRunner;
 
-        private DialogueRunner _dialogueRunner;
+        [SerializeField]
+        private List<YarnCharacter> characters;
 
         public void SetDialogueSystem(GameObject obj)
         {
@@ -20,13 +21,13 @@ namespace EnterKratos.Tutorials
                 characterView.AddCharacter(character);
             }
 
-            _dialogueRunner = obj.GetComponentInChildren<DialogueRunner>();
+            dialogueRunner = obj.GetComponentInChildren<DialogueRunner>();
         }
 
         public void StartDialogue(string startNode)
         {
-            _dialogueRunner.Stop();
-            _dialogueRunner.StartDialogue(startNode);
+            dialogueRunner.Stop();
+            dialogueRunner.StartDialogue(startNode);
         }
     }
 }

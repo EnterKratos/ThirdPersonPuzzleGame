@@ -25,6 +25,6 @@ namespace EnterKratos.GameEventListeners
 
         private void OnDisable() => Event.UnregisterListener(this);
 
-        public void OnEventRaised(T value) => Response.Invoke(value);
+        public virtual void OnEventRaised(T value) => Response.Invoke(value);
     }
 }

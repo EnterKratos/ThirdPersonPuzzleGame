@@ -1,4 +1,5 @@
 ﻿using EnterKratos.Extensions;
+using EnterKratos.ScriptableObjects;
 using UnityEngine;
 
 namespace EnterKratos.Health
@@ -8,6 +9,9 @@ namespace EnterKratos.Health
         [SerializeField]
         private ScriptableObjects.Weapon weapon;
 
+        [SerializeField]
+        private Collectable collectable;
+
         private bool _attacking;
         private GameObject _player;
 
@@ -16,6 +20,14 @@ namespace EnterKratos.Health
         public void SetAttacking(bool value)
         {
             _attacking = value;
+        }
+
+        public void CollectableCollected(Collectable collectedCollectable)
+        {
+            if (collectedCollectable == collectable)
+            {
+                gameObject.SetActive(true);
+            }
         }
 
         private void Start()

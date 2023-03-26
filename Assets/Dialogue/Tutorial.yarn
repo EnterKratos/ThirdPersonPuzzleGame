@@ -96,3 +96,33 @@ title: Reached_Lift_Corridor
 [character name="Voice5"]<style="Name">Voice:</style> [/character]Wow you made it! ...I mean, I knew you could do it!
 [character name="Voice5"]<style="Name">Voice:</style> [/character]Head down the corridor to the lift.
 ===
+
+
+title: Reached_Armoury
+---
+[character name="Voice6"]<style="Name">Voice:</style> [/character]This is the armoury. It seems they they don't have a wide choice of weapons.
+<<set_sword_target_active CombatTutorialController true>>
+[character name="Voice6"]<style="Name">Voice:</style> [/character]That sword's as good as any.
+===
+
+
+title: Collected_Sword
+---
+<<set $trainingDummiesDestroyed to 0>>
+[character name="Voice6"]<style="Name">Voice:</style> [/character]Try hitting one of those training dummies.
+===
+
+
+title: Training_Dummy_Destroyed
+---
+<<set $trainingDummiesDestroyed to $trainingDummiesDestroyed + 1>>
+<<if $trainingDummiesDestroyed == 1>>
+    [character name="Voice6"]<style="Name">Voice:</style> [/character]You're stronger than you look. Destroy the remaining dummies.
+<<elseif $trainingDummiesDestroyed == 3>>
+    [character name="Voice6"]<style="Name">Voice:</style> [/character]Okay I think you're ready to take on one of the skeleton guards.
+    <<release_skeleton CombatTutorialController>>
+    The what?!
+    How long has <i>that</i> been there?!
+<<endif>>
+The what?!
+===
