@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1438335215199890, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
       propertyPath: m_Name
-      value: TrainingDummy
+      value: TrainingDummy Variant
       objectReference: {fileID: 0}
     - target: {fileID: 4949648376908324, guid: bd6b7334ea5f0d247b0c8d0449c00951, type: 3}
       propertyPath: m_RootOrder
@@ -126,3 +126,17 @@ MonoBehaviour:
   onExit:
     m_PersistentCalls:
       m_Calls: []
+--- !u!136 &2272408036871735945
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978356965904773909}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 1.76
+  m_Direction: 1
+  m_Center: {x: 0, y: 0.68, z: 0}

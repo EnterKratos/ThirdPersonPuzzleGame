@@ -4,7 +4,7 @@ using StarterAssets;
 using UnityEngine;
 using Yarn.Unity;
 
-namespace EnterKratos
+namespace EnterKratos.Tutorials
 {
     public class Tutorial : MonoBehaviour
     {

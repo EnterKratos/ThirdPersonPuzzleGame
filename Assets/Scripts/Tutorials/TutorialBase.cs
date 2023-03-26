@@ -3,9 +3,9 @@ using UnityEngine;
 using Yarn.Unity;
 using Yarn.Unity.Example;
 
-namespace EnterKratos
+namespace EnterKratos.Tutorials
 {
-    public class PlatformingTutorial : MonoBehaviour
+    public class TutorialBase : MonoBehaviour
     {
         [SerializeField]
         private List<YarnCharacter> characters;
