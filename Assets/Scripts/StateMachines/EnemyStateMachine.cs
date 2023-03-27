@@ -15,6 +15,12 @@ namespace EnterKratos.StateMachines
         [SerializeField]
         private EnemyBlackboard blackboard;
 
+        [SerializeField]
+        private new Renderer renderer;
+
+        [SerializeField]
+        private Canvas canvas;
+
         public PatrolPoint TargetPatrolPoint
         {
             get
@@ -58,8 +64,13 @@ namespace EnterKratos.StateMachines
 
         public void UpdatePlayer(GameObject newPlayer)
         {
+            if (enabled)
+            {
+                Debug.LogWarning($"Cannot update {nameof(blackboard.player)} on enabled {nameof(EnemyStateMachine)}({GetInstanceID()})");
+                return;
+            }
+            
             blackboard.player = newPlayer.transform;
-            blackboard.OnEnable();
         }
 
         private void Awake()
@@ -74,6 +85,14 @@ namespace EnterKratos.StateMachines
         private void OnEnable()
         {
             blackboard.OnEnable();
+            renderer.enabled = true;
+            canvas.enabled = true;
+        }
+
+        private void OnDisable()
+        {
+            renderer.enabled = false;
+            canvas.enabled = false;
         }
 
         protected override EnemyState InitialState => initialState;

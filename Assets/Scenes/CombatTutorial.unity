@@ -136,7 +136,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh327660
+  m_Name: pb_Mesh674596
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1526,7 +1526,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-391938
+  m_Name: pb_Mesh-913840
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2672,7 +2672,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh327676
+  m_Name: pb_Mesh674632
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3056,7 +3056,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-391854
+  m_Name: pb_Mesh-913756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3319,7 +3319,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-391882
+  m_Name: pb_Mesh-913784
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4464,7 +4464,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-391910
+  m_Name: pb_Mesh-913812
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7663,7 +7663,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-391952
+  m_Name: pb_Mesh-913854
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8045,7 +8045,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-391868
+  m_Name: pb_Mesh-913770
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8719,7 +8719,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-491382
+  m_Name: pb_Mesh674730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8919,7 +8919,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-391924
+  m_Name: pb_Mesh-913826
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9218,7 +9218,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh327758
+  m_Name: pb_Mesh674790
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9547,7 +9547,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-391896
+  m_Name: pb_Mesh-913798
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10131,6 +10131,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1771032107}
     m_Modifications:
+    - target: {fileID: 277149273884951958, guid: 0bc8c03f9adc5d245bcbf89840650279,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1730811113180240744, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: target
@@ -10139,12 +10144,12 @@ PrefabInstance:
     - target: {fileID: 2236754005957951793, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: m_AnchorMax.x
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2236754005957951793, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2326698209489726980, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
@@ -10159,7 +10164,7 @@ PrefabInstance:
     - target: {fileID: 2631615612712360416, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3002303526804594173, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
@@ -10170,13 +10175,18 @@ PrefabInstance:
     - target: {fileID: 3989105467457624782, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4130540311825082068, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 131383215}
+    - target: {fileID: 4130540311825082068, guid: 0bc8c03f9adc5d245bcbf89840650279,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4858613619908245075, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: killable.unityReference
@@ -10310,30 +10320,6 @@ MonoBehaviour:
   typedResponse:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2129616838}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 2129616835}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
       - m_Target: {fileID: 2129616836}
         m_TargetAssemblyTypeName: EnterKratos.StateMachines.EnemyStateMachine, Assembly-CSharp
         m_MethodName: UpdatePlayer
@@ -10346,12 +10332,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!1 &2129616838 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3989105467457624782, guid: 0bc8c03f9adc5d245bcbf89840650279,
-    type: 3}
-  m_PrefabInstance: {fileID: 2129616834}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2132344157
 GameObject:
   m_ObjectHideFlags: 0

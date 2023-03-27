@@ -119,9 +119,8 @@ title: Training_Dummy_Destroyed
 <<if $trainingDummiesDestroyed == 1>>
     [character name="Voice6"]<style="Name">Voice:</style> [/character]You're stronger than you look. Destroy the remaining dummies.
 <<elseif $trainingDummiesDestroyed == 3>>
-    [character name="Voice6"]<style="Name">Voice:</style> [/character]Okay I think you're ready to take on one of the skeleton guards.
     <<release_skeleton CombatTutorialController>>
+    [character name="Voice6"]<style="Name">Voice:</style> [/character]Okay I think you're ready to take on one of the skeleton guards.
     The what?!
-    How long has <i>that</i> been there?!
 <<endif>>
 ===
