@@ -27,6 +27,7 @@ GameObject:
   - component: {fileID: 8391012193673379892}
   - component: {fileID: 9076714941465328109}
   - component: {fileID: 8625394446852514917}
+  - component: {fileID: 2345761899264983197}
   m_Layer: 8
   m_Name: PlayerViking
   m_TagString: Player
@@ -5230,6 +5231,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  collectable: {fileID: 0}
 --- !u!114 &8704679753037703533
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5313,6 +5315,29 @@ MonoBehaviour:
   - {fileID: 37832422919389821}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &2345761899264983197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 37832422919389821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bf3b95f96f846a3b1d68fcd284d05f6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneArrivalEventMapping:
+  - scene: {fileID: 102900000, guid: 148b033037f5a0d4d8f8f7a57ec2ee67, type: 3}
+    sceneArrivalEvent: {fileID: 11400000, guid: b2c11956be60c1d4cbbfe5449a4109be,
+      type: 2}
+    sceneGuid: 148b033037f5a0d4d8f8f7a57ec2ee67
+    scenePath: Assets/Scenes/PlatformingTutorial.unity
+  - scene: {fileID: 102900000, guid: b62699d7f3f853a4b8fae7ca723d5ec3, type: 3}
+    sceneArrivalEvent: {fileID: 11400000, guid: 2cc9968d118475b44b1eaf150a49ff81,
+      type: 2}
+    sceneGuid: b62699d7f3f853a4b8fae7ca723d5ec3
+    scenePath: Assets/Scenes/CombatTutorial.unity
 --- !u!1 &1374037258433587382
 GameObject:
   m_ObjectHideFlags: 0
@@ -5374,6 +5399,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+  collectable: {fileID: 0}
 --- !u!1 &4010127171339607036
 GameObject:
   m_ObjectHideFlags: 0

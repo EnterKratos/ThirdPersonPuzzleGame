@@ -4160,7 +4160,7 @@ MonoBehaviour:
   - {fileID: 1002185637}
   swordTarget: {fileID: 1163426007}
   sword: {fileID: 1336811152}
-  skeleton: {fileID: 1026921369}
+  skeleton: {fileID: 2129616836}
 --- !u!4 &901740981
 Transform:
   m_ObjectHideFlags: 0
@@ -5109,6 +5109,47 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4edc06af1244d9b4db65b1417ab0b0e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1026921371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026921369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ed50f07c0e48c4a7673a032158c79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typedEvent: {fileID: 11400000, guid: 75497b15949dd844696983b89226b0a2, type: 2}
+  typedResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1026921372}
+        m_TargetAssemblyTypeName: EnterKratos.WorldSpaceCanvasCameraUpdater, Assembly-CSharp
+        m_MethodName: SetMainCamera
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &1026921372
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026921369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b4c8553e2b34dd5a5927d6a247513ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  canvas: {fileID: 2129616835}
 --- !u!1 &1055273024
 GameObject:
   m_ObjectHideFlags: 0
@@ -5253,7 +5294,7 @@ PrefabInstance:
     - target: {fileID: 2266693963982279964, guid: 707c766e7a370344a825ccebfb0bda3f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 25.779999
+      value: 151.08
       objectReference: {fileID: 0}
     - target: {fileID: 2266693963982279964, guid: 707c766e7a370344a825ccebfb0bda3f,
         type: 3}
@@ -5263,7 +5304,7 @@ PrefabInstance:
     - target: {fileID: 2266693963982279964, guid: 707c766e7a370344a825ccebfb0bda3f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -28.2
+      value: -19.081612
       objectReference: {fileID: 0}
     - target: {fileID: 2266693963982279964, guid: 707c766e7a370344a825ccebfb0bda3f,
         type: 3}
@@ -5864,17 +5905,17 @@ PrefabInstance:
     - target: {fileID: 7066657548359708560, guid: 24de3a8636f03d54a82f0d50075ad49c,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.99300015
+      value: -0.993
       objectReference: {fileID: 0}
     - target: {fileID: 7066657548359708560, guid: 24de3a8636f03d54a82f0d50075ad49c,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.0073167086
+      value: 0.007
       objectReference: {fileID: 0}
     - target: {fileID: 7066657548359708560, guid: 24de3a8636f03d54a82f0d50075ad49c,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.3238201
+      value: -0.383
       objectReference: {fileID: 0}
     - target: {fileID: 7066657548359708560, guid: 24de3a8636f03d54a82f0d50075ad49c,
         type: 3}
@@ -10112,7 +10153,7 @@ PrefabInstance:
     - target: {fileID: 2631615612712360416, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3002303526804594173, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
@@ -10120,6 +10161,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 6623755689286497679, guid: 847860db8fa143e4a9b2cffa8d87eb7d,
         type: 3}
+    - target: {fileID: 3989105467457624782, guid: 0bc8c03f9adc5d245bcbf89840650279,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4130540311825082068, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: m_Camera
@@ -10139,6 +10185,11 @@ PrefabInstance:
     - target: {fileID: 4951523993986096227, guid: 0bc8c03f9adc5d245bcbf89840650279,
         type: 3}
       propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5068027904156160512, guid: 0bc8c03f9adc5d245bcbf89840650279,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5068027904156160512, guid: 0bc8c03f9adc5d245bcbf89840650279,
@@ -10219,6 +10270,82 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0bc8c03f9adc5d245bcbf89840650279, type: 3}
+--- !u!1 &2129616835 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2631615612712360416, guid: 0bc8c03f9adc5d245bcbf89840650279,
+    type: 3}
+  m_PrefabInstance: {fileID: 2129616834}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2129616836 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5068027904156160512, guid: 0bc8c03f9adc5d245bcbf89840650279,
+    type: 3}
+  m_PrefabInstance: {fileID: 2129616834}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026921369}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e55c949ce4394436879e45124d9475e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2129616837
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1026921369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 19ed50f07c0e48c4a7673a032158c79d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  typedEvent: {fileID: 11400000, guid: 2cc9968d118475b44b1eaf150a49ff81, type: 2}
+  typedResponse:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2129616838}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2129616835}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
+      - m_Target: {fileID: 2129616836}
+        m_TargetAssemblyTypeName: EnterKratos.StateMachines.EnemyStateMachine, Assembly-CSharp
+        m_MethodName: UpdatePlayer
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!1 &2129616838 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3989105467457624782, guid: 0bc8c03f9adc5d245bcbf89840650279,
+    type: 3}
+  m_PrefabInstance: {fileID: 2129616834}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2132344157
 GameObject:
   m_ObjectHideFlags: 0

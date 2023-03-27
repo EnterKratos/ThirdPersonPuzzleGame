@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using EnterKratos.StateMachines;
+using UnityEngine;
 using Yarn.Unity;
 
 namespace EnterKratos.Tutorials
@@ -12,7 +13,7 @@ namespace EnterKratos.Tutorials
         private Collider sword;
 
         [SerializeField]
-        private GameObject skeleton;
+        private EnemyStateMachine skeleton;
 
         [YarnCommand("set_sword_target_active")]
         public void SetSwordTargetActiveState(bool active)
@@ -24,7 +25,7 @@ namespace EnterKratos.Tutorials
         [YarnCommand("release_skeleton")]
         public void ReleaseSkeleton()
         {
-            skeleton.SetActive(true);
+            skeleton.enabled = true;
         }
     }
 }

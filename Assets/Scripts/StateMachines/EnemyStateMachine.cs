@@ -15,11 +15,6 @@ namespace EnterKratos.StateMachines
         [SerializeField]
         private EnemyBlackboard blackboard;
 
-        private void OnEnable()
-        {
-            blackboard.OnEnable();
-        }
-
         public PatrolPoint TargetPatrolPoint
         {
             get
@@ -61,6 +56,12 @@ namespace EnterKratos.StateMachines
             ChangeState(EnemyState.Death);
         }
 
+        public void UpdatePlayer(GameObject newPlayer)
+        {
+            blackboard.player = newPlayer.transform;
+            blackboard.OnEnable();
+        }
+
         private void Awake()
         {
             States[EnemyState.Idle] = new IdleState(this, blackboard);
@@ -68,6 +69,11 @@ namespace EnterKratos.StateMachines
             States[EnemyState.Chase] = new ChaseState(this, blackboard);
             States[EnemyState.Attack] = new AttackState(this, blackboard);
             States[EnemyState.Death] = new DeathState(this, blackboard);
+        }
+
+        private void OnEnable()
+        {
+            blackboard.OnEnable();
         }
 
         protected override EnemyState InitialState => initialState;
