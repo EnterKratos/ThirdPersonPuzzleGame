@@ -1,6 +1,7 @@
 using EnterKratos.Extensions;
 using EnterKratos.ScriptableObjects;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace EnterKratos
 {
@@ -9,6 +10,9 @@ namespace EnterKratos
     {
         [SerializeField]
         private GameEvent onInteract;
+
+        [SerializeField]
+        private UnityEvent onInteractUnityEvent;
 
         [SerializeField]
         private bool singleUse;
@@ -34,6 +38,7 @@ namespace EnterKratos
             }
 
             onInteract.Raise();
+            onInteractUnityEvent.Invoke();
             _used = true;
         }
 
