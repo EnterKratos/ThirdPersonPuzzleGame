@@ -22,7 +22,7 @@ namespace EnterKratos.Fader
 
         private IEnumerator _fadeCoroutine;
 
-        private Direction _lastDirection;
+        private FadeDirection lastFadeDirection;
 
         private float _lastFadeOutRequest;
 
@@ -30,7 +30,7 @@ namespace EnterKratos.Fader
 
         public void FadeOut(bool groupCall = false)
         {
-            Fade(Direction.Out);
+            Fade(FadeDirection.Out);
 
             if (_faderGroup && !groupCall)
             {
@@ -40,7 +40,7 @@ namespace EnterKratos.Fader
 
         private void FadeIn()
         {
-            Fade(Direction.In);
+            Fade(FadeDirection.In);
         }
 
         private void Awake()
@@ -63,26 +63,26 @@ namespace EnterKratos.Fader
             FadeIn();
         }
 
-        private void Fade(Direction direction)
+        private void Fade(FadeDirection fadeDirection)
         {
             _lastFadeOutRequest = Time.time;
 
-            if (!enabled || _fadeCoroutine != null || _lastDirection == direction)
+            if (!enabled || _fadeCoroutine != null || lastFadeDirection == fadeDirection)
             {
                 return;
             }
 
-            _fadeCoroutine = FadeCoroutine(direction);
+            _fadeCoroutine = FadeCoroutine(fadeDirection);
             StartCoroutine(_fadeCoroutine);
 
-            _lastDirection = direction;
+            lastFadeDirection = fadeDirection;
         }
 
-        private IEnumerator FadeCoroutine(Direction direction)
+        private IEnumerator FadeCoroutine(FadeDirection fadeDirection)
         {
             var accumulatedTime = 0F;
-            var a = direction == Direction.In ? MinAlpha : MaxAlpha;
-            var b = direction == Direction.Out ? MinAlpha : MaxAlpha;
+            var a = fadeDirection == FadeDirection.In ? MinAlpha : MaxAlpha;
+            var b = fadeDirection == FadeDirection.Out ? MinAlpha : MaxAlpha;
 
             while(accumulatedTime <= FadeOutDuration)
             {
@@ -93,12 +93,6 @@ namespace EnterKratos.Fader
             }
 
             _fadeCoroutine = null;
-        }
-
-        private enum Direction
-        {
-            In,
-            Out
         }
     }
 }
