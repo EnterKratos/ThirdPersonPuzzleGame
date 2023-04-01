@@ -39,7 +39,10 @@ namespace EnterKratos.Fader
 
             for (var i = 0; i < hits; i++)
             {
-                _raycastHits[i].transform.GetComponent<Fader>().FadeOut();
+                if (_raycastHits[i].transform.TryGetComponent<Fader>(out var fader))
+                {
+                    fader.FadeOut();
+                }
             }
         }
     }
