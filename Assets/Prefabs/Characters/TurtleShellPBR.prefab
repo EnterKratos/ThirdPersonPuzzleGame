@@ -917,6 +917,8 @@ MonoBehaviour:
       unityReference: {fileID: 5227730320792249759}
       rawReference:
         rid: -2
+  renderer: {fileID: 137976475885954992}
+  canvas: {fileID: 8496316327830347117}
   references:
     version: 2
     RefIds:
