@@ -20,12 +20,6 @@ I feel dizzy and disoriented.
 ===
 
 
-title: Walked_To_Training_Dummy
----
-<<throw_sword TutorialController>>
-===
-
-
 title: Walked_To_Target
 ---
 <<set $reachedIndex to $reachedIndex + 1>>

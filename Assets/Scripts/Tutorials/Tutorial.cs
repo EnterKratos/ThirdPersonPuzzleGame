@@ -52,11 +52,6 @@ namespace EnterKratos.Tutorials
             characterController.enabled = true;
         }
 
-        public void WalkedToTrainingDummy()
-        {
-            dialogueRunner.StartDialogue("Walked_To_Training_Dummy");
-        }
-
         [YarnCommand("set_target")]
         public void SetTarget(int targetIndex)
         {
@@ -69,13 +64,6 @@ namespace EnterKratos.Tutorials
             targets[_currentTarget].SetActive(false);
             dialogueRunner.Stop();
             dialogueRunner.StartDialogue("Walked_To_Target");
-        }
-
-        [YarnCommand("throw_sword")]
-        public void ThrowSword()
-        {
-            swordCollectable.gameObject.SetActive(true);
-            StartCoroutine(Throw(swordCollectable, throwForce, throwDelay));
         }
 
         [YarnCommand("throw_key")]
